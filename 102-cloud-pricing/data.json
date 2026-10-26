@@ -1,0 +1,36 @@
+{
+  "workload": {
+    "vcpu": 4,
+    "ram_gb": 16,
+    "egress_gb_month": 500,
+    "hours_per_month": 730,
+    "note": "Linux on-demand, no reservations, no committed-use discounts"
+  },
+  "values": {
+    "aws": {
+      "sku": "m6i.xlarge",
+      "vm_hourly_usd": 0.192,
+      "vm_monthly_usd": 140.16,
+      "egress_first_paid_tier_usd_per_gb": 0.09,
+      "egress_monthly_usd": 36.0,
+      "total_monthly_usd": 176.16
+    },
+    "azure": {
+      "sku": "Standard_D4s_v5",
+      "vm_hourly_usd": 0.192,
+      "vm_monthly_usd": 140.16,
+      "egress_first_paid_tier_usd_per_gb": 0.08,
+      "egress_monthly_usd": 32.0,
+      "total_monthly_usd": 172.16
+    }
+  },
+  "methodology_notes": [
+    "AWS bulk price list does NOT encode the 100 GB/mo free egress allowance; Azure's retail API DOES (as a $0.00 tier). Comparing raw API output overstates AWS egress by 25%. Both are normalised here to 100 GB free.",
+    "Azure egress query must filter to 'Routing Preference: Internet'. Filtering by minimum price returns the Inter-Availability Zone meter at $0.01/GB -- ~9x too low."
+  ],
+  "sources": {
+    "aws_compute": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json (retrieved 2026-10-26)",
+    "aws_egress": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json (retrieved 2026-10-26)",
+    "azure": "https://prices.azure.com/api/retail/prices (retrieved 2026-10-26)"
+  }
+}
