@@ -1,0 +1,87 @@
+{
+  "workload": {
+    "egress_gb_month": 500,
+    "note": "internet egress only; same 500 GB as video #1"
+  },
+  "values": {
+    "aws": {
+      "rate_usd_per_gb": 0.09,
+      "free_allowance_gb": 100,
+      "monthly_usd_500gb": 36.0,
+      "note": "tiered; $0.09/GB to 10 TB"
+    },
+    "azure": {
+      "rate_usd_per_gb": 0.08,
+      "free_allowance_gb": 100,
+      "monthly_usd_500gb": 32.0,
+      "note": "tiered; $0.08/GB to 10 TB"
+    },
+    "fly": {
+      "rate_usd_per_gb": 0.02,
+      "free_allowance_gb": 0,
+      "monthly_usd_500gb": 10.0,
+      "note": "North America & Europe; $0.015 APAC/Oceania/SA"
+    },
+    "digitalocean": {
+      "rate_usd_per_gb": 0.01,
+      "free_allowance_gb": 1000,
+      "monthly_usd_500gb": 0.0,
+      "note": "pooled per-Droplet allowance; $0.01/GiB over"
+    },
+    "backblaze_b2": {
+      "rate_usd_per_gb": 0.01,
+      "free_allowance_gb": null,
+      "monthly_usd_500gb": 0.0,
+      "note": "free egress up to 3x avg monthly stored data, then $0.01/GB"
+    },
+    "hetzner": {
+      "rate_usd_per_gb": 0.001,
+      "free_allowance_gb": 20000,
+      "monthly_usd_500gb": 0.0,
+      "note": "20 TB included with CCX plans"
+    },
+    "cloudflare_r2": {
+      "rate_usd_per_gb": 0.0,
+      "free_allowance_gb": null,
+      "monthly_usd_500gb": 0.0,
+      "note": "zero egress to internet, Standard storage"
+    },
+    "wasabi": {
+      "rate_usd_per_gb": 0.0,
+      "free_allowance_gb": null,
+      "monthly_usd_500gb": 0.0,
+      "note": "$0 egress and API fees"
+    },
+    "_summary": {
+      "dearest": "aws",
+      "dearest_usd": 36.0,
+      "free_providers": [
+        "digitalocean",
+        "backblaze_b2",
+        "hetzner",
+        "cloudflare_r2",
+        "wasabi"
+      ],
+      "n_free": 5,
+      "hyperscaler_vs_free_annual": 432.0,
+      "aws_vs_fly_multiple": 3.6
+    }
+  },
+  "methodology_notes": [
+    "GCP is ABSENT: its egress table is JS-rendered and the public pricing endpoints are retired. Needs a (free) Cloud Billing API key. Do not estimate it.",
+    "Backblaze and Cloudflare 'free' is conditional: B2 is free to 3x stored data; R2 is free for Standard storage egress to internet.",
+    "DigitalOcean pools a per-Droplet allowance across the team; 500 GB sits inside a single Droplet's allowance.",
+    "Hetzner includes 20 TB, so 500 GB has zero marginal cost -- not merely cheap.",
+    "Object-store providers (R2, B2, Wasabi) are not substitutes for a compute VM's egress. Compared here on egress price only."
+  ],
+  "sources": {
+    "aws": "AWS Price List API, AWSDataTransfer (2026-10-27)",
+    "azure": "https://prices.azure.com/api/retail/prices (2026-10-27)",
+    "fly": "https://docs.fly.io/about/pricing/ (2026-10-27)",
+    "digitalocean": "https://docs.digitalocean.com/products/billing/bandwidth/ (2026-10-27)",
+    "backblaze_b2": "https://www.backblaze.com/cloud-storage/pricing (2026-10-27)",
+    "hetzner": "https://www.hetzner.com/cloud/general-purpose/ (2026-10-27)",
+    "cloudflare_r2": "https://developers.cloudflare.com/r2/pricing/ (2026-10-27)",
+    "wasabi": "https://wasabi.com/pricing (2026-10-27)"
+  }
+}
