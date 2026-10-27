@@ -65,6 +65,27 @@
       "n_free": 5,
       "hyperscaler_vs_free_annual": 432.0,
       "aws_vs_fly_multiple": 3.6
+    },
+    "_markup": {
+      "wholesale_usd_per_mbps_month": 0.08,
+      "gb_per_mbps_month": 328.5,
+      "wholesale_usd_per_gb_at_100pct": 0.000244,
+      "wholesale_usd_per_gb_at_50pct": 0.000487,
+      "aws_usd_per_gb": 0.09,
+      "markup_multiple_conservative": 185,
+      "markup_multiple_theoretical": 370
+    },
+    "_scale": {
+      "aws_500gb": 36.0,
+      "aws_5tb": 441.0,
+      "aws_50tb": 4394.2,
+      "aws_500tb": 29482.2,
+      "r2_any_volume": 0.0,
+      "exit_cost_50tb": 4394.2
+    },
+    "_regulation": {
+      "eu_data_act_ban_date": "2027-01-12",
+      "status": "AWS, Azure and Google all already waive egress \u2014 but only for customers leaving."
     }
   },
   "methodology_notes": [
@@ -72,7 +93,10 @@
     "Backblaze and Cloudflare 'free' is conditional: B2 is free to 3x stored data; R2 is free for Standard storage egress to internet.",
     "DigitalOcean pools a per-Droplet allowance across the team; 500 GB sits inside a single Droplet's allowance.",
     "Hetzner includes 20 TB, so 500 GB has zero marginal cost -- not merely cheap.",
-    "Object-store providers (R2, B2, Wasabi) are not substitutes for a compute VM's egress. Compared here on egress price only."
+    "Object-store providers (R2, B2, Wasabi) are not substitutes for a compute VM's egress. Compared here on egress price only.",
+    "Wholesale transit converted to $/GB assuming a month of 730h. At 100% port utilisation 1 Mbps moves ~328 GB; real networks average far less, so the conservative figure assumes 50%.",
+    "AWS at-scale figures use the published tier breaks (100 GB free, then $0.09 / $0.085 / $0.07 / $0.05).",
+    "The markup compares a retail per-GB price to a wholesale port price. They are different products -- the comparison bounds the input cost, it is not a margin calculation."
   ],
   "sources": {
     "aws": "AWS Price List API, AWSDataTransfer (2026-10-27)",
@@ -82,6 +106,8 @@
     "backblaze_b2": "https://www.backblaze.com/cloud-storage/pricing (2026-10-27)",
     "hetzner": "https://www.hetzner.com/cloud/general-purpose/ (2026-10-27)",
     "cloudflare_r2": "https://developers.cloudflare.com/r2/pricing/ (2026-10-27)",
-    "wasabi": "https://wasabi.com/pricing (2026-10-27)"
+    "wasabi": "https://wasabi.com/pricing (2026-10-27)",
+    "wholesale_transit": "TeleGeography IP Transit Pricing, Q2 2026 weighted median 100 GigE US/EU (2026-10-27)",
+    "eu_data_act": "EU Data Act Chapter 6; hyperscaler egress-waiver programmes (2026-10-27)"
   }
 }
