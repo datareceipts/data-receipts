@@ -1,0 +1,152 @@
+{
+  "workload": {
+    "instance": "m6i.xlarge",
+    "vcpu": 4,
+    "ram_gb": 16,
+    "region": "us-east-1",
+    "os": "Linux",
+    "tenancy": "shared",
+    "hours_per_month": 730
+  },
+  "values": {
+    "1yr_all_upfront": {
+      "years": 1,
+      "option": "All Upfront",
+      "upfront_usd": 1038.0,
+      "hourly_usd": 0.0,
+      "pct_saved": 38.3,
+      "breakeven_months": 7.4,
+      "total_usd": 1038.0,
+      "ondemand_usd": 1681.92
+    },
+    "1yr_no_upfront": {
+      "years": 1,
+      "option": "No Upfront",
+      "upfront_usd": 0.0,
+      "hourly_usd": 0.12701,
+      "pct_saved": 33.8,
+      "breakeven_months": 0.0,
+      "total_usd": 1112.61,
+      "ondemand_usd": 1681.92
+    },
+    "1yr_partial_upfront": {
+      "years": 1,
+      "option": "Partial Upfront",
+      "upfront_usd": 530.0,
+      "hourly_usd": 0.06048,
+      "pct_saved": 37.0,
+      "breakeven_months": 5.5,
+      "total_usd": 1059.8,
+      "ondemand_usd": 1681.92
+    },
+    "3yr_all_upfront": {
+      "years": 3,
+      "option": "All Upfront",
+      "upfront_usd": 1992.0,
+      "hourly_usd": 0.0,
+      "pct_saved": 60.5,
+      "breakeven_months": 14.2,
+      "total_usd": 1992.0,
+      "ondemand_usd": 5045.76
+    },
+    "3yr_no_upfront": {
+      "years": 3,
+      "option": "No Upfront",
+      "upfront_usd": 0.0,
+      "hourly_usd": 0.08709,
+      "pct_saved": 54.6,
+      "breakeven_months": 0.0,
+      "total_usd": 2288.73,
+      "ondemand_usd": 5045.76
+    },
+    "3yr_partial_upfront": {
+      "years": 3,
+      "option": "Partial Upfront",
+      "upfront_usd": 1060.0,
+      "hourly_usd": 0.04032,
+      "pct_saved": 58.0,
+      "breakeven_months": 9.6,
+      "total_usd": 2119.61,
+      "ondemand_usd": 5045.76
+    },
+    "_summary": {
+      "deepest_discount_pct": 60.5,
+      "deepest_term": "3yr All Upfront",
+      "deepest_breakeven_months": 14.2,
+      "fastest_breakeven_months": 5.5,
+      "fastest_breakeven_term": "1yr Partial Upfront",
+      "ondemand_hourly": 0.192,
+      "ondemand_monthly": 140.16
+    },
+    "conv_1yr_all_upfront": {
+      "years": 1,
+      "option": "All Upfront",
+      "upfront_usd": 1153.0,
+      "hourly_usd": 0.0,
+      "pct_saved": 31.4,
+      "breakeven_months": 8.2
+    },
+    "conv_1yr_no_upfront": {
+      "years": 1,
+      "option": "No Upfront",
+      "upfront_usd": 0.0,
+      "hourly_usd": 0.14106,
+      "pct_saved": 26.5,
+      "breakeven_months": 0.0
+    },
+    "conv_1yr_partial_upfront": {
+      "years": 1,
+      "option": "Partial Upfront",
+      "upfront_usd": 588.0,
+      "hourly_usd": 0.06717,
+      "pct_saved": 30.1,
+      "breakeven_months": 6.5
+    },
+    "conv_3yr_all_upfront": {
+      "years": 3,
+      "option": "All Upfront",
+      "upfront_usd": 2322.0,
+      "hourly_usd": 0.0,
+      "pct_saved": 54.0,
+      "breakeven_months": 16.6
+    },
+    "conv_3yr_no_upfront": {
+      "years": 3,
+      "option": "No Upfront",
+      "upfront_usd": 0.0,
+      "hourly_usd": 0.09737,
+      "pct_saved": 49.3,
+      "breakeven_months": 0.0
+    },
+    "conv_3yr_partial_upfront": {
+      "years": 3,
+      "option": "Partial Upfront",
+      "upfront_usd": 1185.0,
+      "hourly_usd": 0.04508,
+      "pct_saved": 53.0,
+      "breakeven_months": 11.0
+    },
+    "_flex": {
+      "premium_usd": 330.0,
+      "discount_cost_pts": 6.5,
+      "extra_months": 2.4,
+      "conv_breakeven": 16.6,
+      "conv_saved": 54.0
+    },
+    "_optcost": {
+      "months_of_ondemand": 14.2
+    }
+  },
+  "methodology_notes": [
+    "Standard offering class only. Convertible RIs trade discount for flexibility and are excluded.",
+    "Break-even = upfront / (monthly on-demand cost - monthly reserved cost). It is the month at which the commitment stops losing money versus on-demand.",
+    "No Upfront terms have a break-even of 0 by definition - they never cost more than on-demand, but they still lock the instance type for the full term.",
+    "Savings Plans are a separate product with different flexibility and are not compared here.",
+    "Excludes the opportunity cost of newer, cheaper instance generations released mid-term.",
+    "Convertible RIs allow changing instance family mid-term; standard RIs do not. Both are shown so the flexibility premium is explicit."
+  ],
+  "sources": {
+    "aws_reserved": "AWS Price List API, AmazonEC2 us-east-1, terms.Reserved, SKU 2UVH39HPDNC399X4 (2026-10-29)",
+    "aws_ondemand": "AWS Price List API, same SKU, terms.OnDemand (2026-10-29)"
+  }
+}
