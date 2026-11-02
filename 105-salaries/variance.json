@@ -1,19 +1,156 @@
 {
+  "source": {
+    "name": "US Department of Labor, Office of Foreign Labor Certification \u2014 LCA Disclosure Data FY2026 Q1",
+    "url": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
+    "file": "LCA_Disclosure_Data_FY2026_Q1.xlsx",
+    "published": "2025-12-18",
+    "what_each_row_is": "An employer's legal attestation of the wage it will pay for one named role at one named worksite."
+  },
+  "method": "omega-squared, all factors scored on one identical set of rows",
+  "core_n": 30088,
+  "subset_n": 11431,
+  "min_group_n": 30,
   "omega_squared": {
-    "seniority in title": 0.0244,
-    "worksite city": 0.3226,
+    "seniority_in_title": 0.0375,
+    "worksite_city": 0.3226,
     "employer": 0.4097
   },
-  "subset_n": 11431,
-  "core_n": 30088,
-  "sse_percentiles": {
-    "p10": 115000,
-    "p25": 130707,
-    "p50": 151133,
-    "p75": 185453,
-    "p90": 214000
+  "group_counts": {
+    "seniority_in_title": 9,
+    "worksite_city": 161,
+    "employer": 119
   },
-  "sse_n": 1451,
-  "sse_min": 54621,
-  "sse_max": 351900
+  "seniority_medians": {
+    "staff": {
+      "n": 1117,
+      "median": 188100
+    },
+    "manager": {
+      "n": 1914,
+      "median": 163550
+    },
+    "principal": {
+      "n": 1063,
+      "median": 157000
+    },
+    "mid": {
+      "n": 1519,
+      "median": 155000
+    },
+    "architect": {
+      "n": 926,
+      "median": 145642
+    },
+    "lead": {
+      "n": 1607,
+      "median": 140046
+    },
+    "senior": {
+      "n": 6172,
+      "median": 140000
+    },
+    "junior": {
+      "n": 390,
+      "median": 129000
+    },
+    "unlabelled": {
+      "n": 15380,
+      "median": 121498
+    }
+  },
+  "title_held_constant": {
+    "match": "job title contains 'senior software engineer'",
+    "n": 1451,
+    "min": 54621,
+    "max": 351900,
+    "percentiles": {
+      "p10": 115000,
+      "p25": 130707,
+      "p50": 151133,
+      "p75": 185453,
+      "p90": 214000
+    },
+    "p90_over_p10": 1.861,
+    "by_employer_min_15": [
+      {
+        "employer": "FIDELITY TECHNOLOGY GROUP, LLC D/B/A FIDELITY INVESTMENTS",
+        "n": 88,
+        "median": 116709
+      },
+      {
+        "employer": "LOWE'S COMPANIES, INC.",
+        "n": 21,
+        "median": 133536
+      },
+      {
+        "employer": "WELLS FARGO BANK, N.A.",
+        "n": 22,
+        "median": 133536
+      },
+      {
+        "employer": "U.S. BANK NATIONAL ASSOCIATION",
+        "n": 39,
+        "median": 134971
+      },
+      {
+        "employer": "J.B. HUNT TRANSPORT, INC.",
+        "n": 22,
+        "median": 138364
+      },
+      {
+        "employer": "GENERAL MOTORS",
+        "n": 26,
+        "median": 149696
+      },
+      {
+        "employer": "WAL-MART ASSOCIATES, INC.",
+        "n": 51,
+        "median": 150080
+      },
+      {
+        "employer": "THE MATHWORKS, INC.",
+        "n": 26,
+        "median": 154606
+      },
+      {
+        "employer": "HUBSPOT, INC.",
+        "n": 21,
+        "median": 157600
+      },
+      {
+        "employer": "BLOOMBERG L.P.",
+        "n": 19,
+        "median": 160805
+      },
+      {
+        "employer": "ASML US, LP",
+        "n": 17,
+        "median": 161720
+      },
+      {
+        "employer": "SERVICENOW, INC.",
+        "n": 21,
+        "median": 173361
+      },
+      {
+        "employer": "PAYPAL, INC.",
+        "n": 26,
+        "median": 186500
+      },
+      {
+        "employer": "SNOWFLAKE INC.",
+        "n": 19,
+        "median": 200000
+      }
+    ]
+  },
+  "methodology_notes": [
+    "Hourly filings are annualised at 2080 hours per year.",
+    "WAGE_RATE_OF_PAY_FROM is the bottom of the attested range \u2014 the figure the employer is legally bound to meet. It is a floor, not a midpoint.",
+    "Seniority is inferred from the employer's own job title text, not from any standardised level. 'unlabelled' means the title carried no seniority word.",
+    "Manager and director titles are a separate track from the individual contributor ladder; they are reported but are not a rung above 'staff'.",
+    "These are base wages. Equity and bonus are not part of an LCA attestation, so these figures are not comparable to survey numbers that include them.",
+    "H-1B filings skew toward larger employers, tech-dense metros, and roles companies choose to sponsor. This is not a sample of all US software jobs.",
+    "All personal columns in the source file are discarded on read."
+  ]
 }

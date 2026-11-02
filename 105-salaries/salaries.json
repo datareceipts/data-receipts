@@ -39,7 +39,7 @@
       "not certified": 8456,
       "not H-1B": 2882,
       "not full time": 481,
-      "annualised wage out of plausible range": 64
+      "unknown unit or implausible annualised wage": 64
     },
     "wage_units_seen": {
       "Year": 43005,
@@ -49,7 +49,7 @@
       "Bi-Weekly": 3
     }
   },
-  "overall": {
+  "overall_all_software_soc": {
     "n": 45079,
     "p10": 92000,
     "p25": 110000,
@@ -58,69 +58,69 @@
     "p90": 201000,
     "mean": 142215
   },
+  "overall_core_soc": {
+    "n": 30088,
+    "p10": 97386,
+    "p25": 112923,
+    "median": 136731,
+    "p75": 169958,
+    "p90": 206600,
+    "mean": 146149
+  },
   "by_seniority_all_software_soc": {
-    "architect": {
-      "n": 1982,
-      "p10": 90210,
-      "p25": 106954,
-      "median": 130707,
-      "p75": 156998,
-      "p90": 180000,
-      "mean": 133678
-    },
-    "junior": {
-      "n": 663,
-      "p10": 84506,
-      "p25": 103106,
-      "median": 125000,
-      "p75": 135850,
-      "p90": 151820,
-      "mean": 123244
-    },
-    "lead": {
-      "n": 2867,
-      "p10": 97618,
-      "p25": 118331,
-      "median": 141200,
-      "p75": 162172,
-      "p90": 185838,
-      "mean": 143108
-    },
-    "manager": {
-      "n": 4930,
-      "p10": 105040,
-      "p25": 122052,
-      "median": 147576,
-      "p75": 175294,
-      "p90": 204900,
-      "mean": 152787
+    "unlabelled": {
+      "n": 21273,
+      "p10": 86798,
+      "p25": 100797,
+      "median": 118310,
+      "p75": 155750,
+      "p90": 200000,
+      "mean": 133584
     },
     "mid": {
-      "n": 2629,
-      "p10": 92394,
-      "p25": 109520,
-      "median": 141300,
-      "p75": 164079,
-      "p90": 180420,
-      "mean": 138068
+      "n": 2107,
+      "p10": 100982,
+      "p25": 124051,
+      "median": 152000,
+      "p75": 168100,
+      "p90": 182000,
+      "mean": 145914
     },
-    "principal": {
-      "n": 1458,
-      "p10": 125798,
-      "p25": 136500,
-      "median": 157000,
-      "p75": 185314,
-      "p90": 222370,
-      "mean": 167096
+    "manager": {
+      "n": 5256,
+      "p10": 106650,
+      "p25": 124933,
+      "median": 150000,
+      "p75": 176150,
+      "p90": 204900,
+      "mean": 153805
+    },
+    "lead": {
+      "n": 2488,
+      "p10": 94557,
+      "p25": 114156,
+      "median": 137352,
+      "p75": 159850,
+      "p90": 181293,
+      "mean": 139528
+    },
+    "architect": {
+      "n": 2035,
+      "p10": 90210,
+      "p25": 108077,
+      "median": 131300,
+      "p75": 157123,
+      "p90": 180000,
+      "mean": 134120
     },
     "senior": {
-      "n": 8937,
-      "p10": 104807,
-      "p25": 118706,
-      "median": 138258,
-      "p75": 165000,
-      "p90": 198608,
-      "mean": 146219
+      "n": 8522,
+      "p10": 104811,
+      "p25": 118851,
+      "median": 139152,
+      "p75": 165422,
+      "p90": 200000,
+      "mean": 146830
     },
     "staff": {
       "n": 1348,
@@ -131,79 +131,52 @@
       "p90": 261454,
       "mean": 197185
     },
-    "unlabelled": {
-      "n": 20265,
-      "p10": 86965,
-      "p25": 101350,
-      "median": 118456,
-      "p75": 157560,
-      "p90": 201143,
-      "mean": 134297
+    "principal": {
+      "n": 1458,
+      "p10": 125798,
+      "p25": 136500,
+      "median": 157000,
+      "p75": 185314,
+      "p90": 222370,
+      "mean": 167096
+    },
+    "junior": {
+      "n": 592,
+      "p10": 85000,
+      "p25": 102129,
+      "median": 123500,
+      "p75": 135000,
+      "p90": 149365,
+      "mean": 122513
     }
   },
   "by_seniority_core_soc": {
-    "architect": {
-      "n": 903,
-      "p10": 111128,
-      "p25": 126250,
-      "median": 145642,
-      "p75": 166767,
-      "p90": 189678,
-      "mean": 149174
-    },
-    "junior": {
-      "n": 438,
-      "p10": 100000,
-      "p25": 110788,
-      "median": 129000,
-      "p75": 135375,
-      "p90": 149556,
-      "mean": 124685
-    },
-    "lead": {
-      "n": 1882,
-      "p10": 105986,
-      "p25": 125541,
-      "median": 146632,
-      "p75": 164909,
-      "p90": 186960,
-      "mean": 146632
-    },
-    "manager": {
-      "n": 1662,
-      "p10": 128600,
-      "p25": 146000,
-      "median": 162400,
-      "p75": 189000,
-      "p90": 217000,
-      "mean": 170117
+    "unlabelled": {
+      "n": 15380,
+      "p10": 90000,
+      "p25": 105000,
+      "median": 121498,
+      "p75": 160000,
+      "p90": 205000,
+      "mean": 136917
     },
     "mid": {
-      "n": 1650,
-      "p10": 106324,
-      "p25": 129667,
-      "median": 153866,
-      "p75": 170000,
-      "p90": 184000,
-      "mean": 149009
+      "n": 1519,
+      "p10": 107403,
+      "p25": 131300,
+      "median": 155000,
+      "p75": 171050,
+      "p90": 183700,
+      "mean": 150373
     },
-    "principal": {
-      "n": 1063,
-      "p10": 126672,
-      "p25": 138317,
-      "median": 157000,
-      "p75": 187574,
-      "p90": 223280,
-      "mean": 168260
-    },
-    "senior": {
-      "n": 6447,
-      "p10": 109924,
-      "p25": 121268,
-      "median": 140000,
-      "p75": 167260,
-      "p90": 201053,
-      "mean": 149098
+    "architect": {
+      "n": 926,
+      "p10": 111086,
+      "p25": 126786,
+      "median": 145642,
+      "p75": 166950,
+      "p90": 189646,
+      "mean": 149187
     },
     "staff": {
       "n": 1117,
@@ -214,107 +187,53 @@
       "p90": 260000,
       "mean": 196023
     },
-    "unlabelled": {
-      "n": 14926,
-      "p10": 90000,
-      "p25": 104499,
-      "median": 120536,
-      "p75": 160805,
-      "p90": 205482,
-      "mean": 136969
+    "senior": {
+      "n": 6172,
+      "p10": 110000,
+      "p25": 121064,
+      "median": 140000,
+      "p75": 168730,
+      "p90": 202733,
+      "mean": 149624
+    },
+    "principal": {
+      "n": 1063,
+      "p10": 126672,
+      "p25": 138317,
+      "median": 157000,
+      "p75": 187574,
+      "p90": 223280,
+      "mean": 168260
+    },
+    "junior": {
+      "n": 390,
+      "p10": 94100,
+      "p25": 114325,
+      "median": 129000,
+      "p75": 135275,
+      "p90": 149365,
+      "mean": 124173
+    },
+    "manager": {
+      "n": 1914,
+      "p10": 130000,
+      "p25": 148419,
+      "median": 163550,
+      "p75": 187615,
+      "p90": 215000,
+      "mean": 170003
+    },
+    "lead": {
+      "n": 1607,
+      "p10": 103734,
+      "p25": 120000,
+      "median": 140046,
+      "p75": 160540,
+      "p90": 183197,
+      "mean": 143041
     }
   },
   "by_soc_title": {
-    "Computer Network Architects": {
-      "n": 341,
-      "p10": 112029,
-      "p25": 125000,
-      "median": 147597,
-      "p75": 171725,
-      "p90": 205216,
-      "mean": 152733
-    },
-    "Computer Network Support Specialists": {
-      "n": 64,
-      "p10": 66157,
-      "p25": 78270,
-      "median": 93756,
-      "p75": 130564,
-      "p90": 165000,
-      "mean": 105805
-    },
-    "Computer Occupations, All Other": {
-      "n": 6102,
-      "p10": 86445,
-      "p25": 94869,
-      "median": 120013,
-      "p75": 150000,
-      "p90": 183000,
-      "mean": 130008
-    },
-    "Computer Programmers": {
-      "n": 1782,
-      "p10": 76315,
-      "p25": 80000,
-      "median": 98301,
-      "p75": 115000,
-      "p90": 131346,
-      "mean": 102259
-    },
-    "Computer Systems Analysts": {
-      "n": 1601,
-      "p10": 88026,
-      "p25": 98758,
-      "median": 115170,
-      "p75": 135000,
-      "p90": 160684,
-      "mean": 119344
-    },
-    "Computer and Information Research Scientists": {
-      "n": 492,
-      "p10": 120935,
-      "p25": 156831,
-      "median": 185723,
-      "p75": 224097,
-      "p90": 266970,
-      "mean": 197553
-    },
-    "Data Scientists": {
-      "n": 3845,
-      "p10": 89586,
-      "p25": 105997,
-      "median": 134424,
-      "p75": 169541,
-      "p90": 200000,
-      "mean": 142248
-    },
-    "Database Administrators": {
-      "n": 991,
-      "p10": 87381,
-      "p25": 100000,
-      "median": 123136,
-      "p75": 148849,
-      "p90": 175000,
-      "mean": 127172
-    },
-    "Database Architects": {
-      "n": 768,
-      "p10": 113235,
-      "p25": 123149,
-      "median": 142958,
-      "p75": 163455,
-      "p90": 190000,
-      "mean": 146882
-    },
-    "Network and Computer Systems Administrators": {
-      "n": 764,
-      "p10": 81836,
-      "p25": 86991,
-      "median": 105051,
-      "p75": 127409,
-      "p90": 150000,
-      "mean": 111827
-    },
     "Software Developers": {
       "n": 25546,
       "p10": 105980,
@@ -332,6 +251,96 @@
       "p75": 132110,
       "p90": 161325,
       "mean": 117640
+    },
+    "Computer Occupations, All Other": {
+      "n": 6102,
+      "p10": 86445,
+      "p25": 94869,
+      "median": 120013,
+      "p75": 150000,
+      "p90": 183000,
+      "mean": 130008
+    },
+    "Database Administrators": {
+      "n": 991,
+      "p10": 87381,
+      "p25": 100000,
+      "median": 123136,
+      "p75": 148849,
+      "p90": 175000,
+      "mean": 127172
+    },
+    "Computer Programmers": {
+      "n": 1782,
+      "p10": 76315,
+      "p25": 80000,
+      "median": 98301,
+      "p75": 115000,
+      "p90": 131346,
+      "mean": 102259
+    },
+    "Network and Computer Systems Administrators": {
+      "n": 764,
+      "p10": 81836,
+      "p25": 86991,
+      "median": 105051,
+      "p75": 127409,
+      "p90": 150000,
+      "mean": 111827
+    },
+    "Data Scientists": {
+      "n": 3845,
+      "p10": 89586,
+      "p25": 105997,
+      "median": 134424,
+      "p75": 169541,
+      "p90": 200000,
+      "mean": 142248
+    },
+    "Database Architects": {
+      "n": 768,
+      "p10": 113235,
+      "p25": 123149,
+      "median": 142958,
+      "p75": 163455,
+      "p90": 190000,
+      "mean": 146882
+    },
+    "Computer and Information Research Scientists": {
+      "n": 492,
+      "p10": 120935,
+      "p25": 156831,
+      "median": 185723,
+      "p75": 224097,
+      "p90": 266970,
+      "mean": 197553
+    },
+    "Computer Systems Analysts": {
+      "n": 1601,
+      "p10": 88026,
+      "p25": 98758,
+      "median": 115170,
+      "p75": 135000,
+      "p90": 160684,
+      "mean": 119344
+    },
+    "Computer Network Support Specialists": {
+      "n": 64,
+      "p10": 66157,
+      "p25": 78270,
+      "median": 93756,
+      "p75": 130564,
+      "p90": 165000,
+      "mean": 105805
+    },
+    "Computer Network Architects": {
+      "n": 341,
+      "p10": 112029,
+      "p25": 125000,
+      "median": 147597,
+      "p75": 171725,
+      "p90": 205216,
+      "mean": 152733
     }
   },
   "top_metros": [
@@ -896,11 +905,12 @@
     "share_at_or_below_prevailing": 0.4022
   },
   "methodology_notes": [
-    "Wages are annualised with 2080 hours per year for hourly filings.",
-    "WAGE_RATE_OF_PAY_FROM is the bottom of the attested range; it is the figure the employer is legally bound to meet, so it is a floor, not a midpoint.",
-    "Seniority is inferred from the employer's own JOB_TITLE text, not from any standardised level. 'unlabelled' means the title carried no seniority word.",
-    "These are base wages. Equity and bonus are not part of an LCA attestation, so totals here are not comparable to survey figures that include them.",
-    "H-1B filings skew toward larger employers and tech-dense metros, and toward roles companies choose to sponsor. This is not a sample of all US software jobs.",
-    "All personal columns in the source file (employer and attorney contacts) are discarded on read and appear nowhere in this output."
+    "Hourly filings are annualised at 2080 hours per year.",
+    "WAGE_RATE_OF_PAY_FROM is the bottom of the attested range \u2014 the figure the employer is legally bound to meet. It is a floor, not a midpoint.",
+    "Seniority is inferred from the employer's own job title text, not from any standardised level. 'unlabelled' means the title carried no seniority word.",
+    "Manager and director titles are a separate track from the individual contributor ladder; they are reported but are not a rung above 'staff'.",
+    "These are base wages. Equity and bonus are not part of an LCA attestation, so these figures are not comparable to survey numbers that include them.",
+    "H-1B filings skew toward larger employers, tech-dense metros, and roles companies choose to sponsor. This is not a sample of all US software jobs.",
+    "All personal columns in the source file are discarded on read."
   ]
 }
