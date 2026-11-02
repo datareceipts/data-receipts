@@ -1,0 +1,19 @@
+{
+  "omega_squared": {
+    "seniority in title": 0.0244,
+    "worksite city": 0.3226,
+    "employer": 0.4097
+  },
+  "subset_n": 11431,
+  "core_n": 30088,
+  "sse_percentiles": {
+    "p10": 115000,
+    "p25": 130707,
+    "p50": 151133,
+    "p75": 185453,
+    "p90": 214000
+  },
+  "sse_n": 1451,
+  "sse_min": 54621,
+  "sse_max": 351900
+}

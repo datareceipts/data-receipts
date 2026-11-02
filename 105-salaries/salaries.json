@@ -1,0 +1,906 @@
+{
+  "source": {
+    "name": "US Department of Labor, Office of Foreign Labor Certification \u2014 LCA Disclosure Data FY2026 Q1",
+    "url": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
+    "file": "LCA_Disclosure_Data_FY2026_Q1.xlsx",
+    "published": "2025-12-18",
+    "what_each_row_is": "An employer's legal attestation of the wage it will pay for one named role at one named worksite."
+  },
+  "filters": {
+    "case_status": "Certified",
+    "visa_class": "H-1B",
+    "full_time_only": true,
+    "soc_codes": [
+      "15-1211",
+      "15-1221",
+      "15-1231",
+      "15-1232",
+      "15-1241",
+      "15-1242",
+      "15-1243",
+      "15-1244",
+      "15-1251",
+      "15-1252",
+      "15-1253",
+      "15-1299",
+      "15-2051"
+    ],
+    "annualised_range_usd": [
+      20000,
+      2000000
+    ]
+  },
+  "counts": {
+    "data_rows": 83120,
+    "blank_padding_rows": 959317,
+    "rows_kept": 45079,
+    "dropped": {
+      "non-software SOC": 26158,
+      "not certified": 8456,
+      "not H-1B": 2882,
+      "not full time": 481,
+      "annualised wage out of plausible range": 64
+    },
+    "wage_units_seen": {
+      "Year": 43005,
+      "Hour": 2041,
+      "Month": 27,
+      "Week": 3,
+      "Bi-Weekly": 3
+    }
+  },
+  "overall": {
+    "n": 45079,
+    "p10": 92000,
+    "p25": 110000,
+    "median": 133536,
+    "p75": 165000,
+    "p90": 201000,
+    "mean": 142215
+  },
+  "by_seniority_all_software_soc": {
+    "architect": {
+      "n": 1982,
+      "p10": 90210,
+      "p25": 106954,
+      "median": 130707,
+      "p75": 156998,
+      "p90": 180000,
+      "mean": 133678
+    },
+    "junior": {
+      "n": 663,
+      "p10": 84506,
+      "p25": 103106,
+      "median": 125000,
+      "p75": 135850,
+      "p90": 151820,
+      "mean": 123244
+    },
+    "lead": {
+      "n": 2867,
+      "p10": 97618,
+      "p25": 118331,
+      "median": 141200,
+      "p75": 162172,
+      "p90": 185838,
+      "mean": 143108
+    },
+    "manager": {
+      "n": 4930,
+      "p10": 105040,
+      "p25": 122052,
+      "median": 147576,
+      "p75": 175294,
+      "p90": 204900,
+      "mean": 152787
+    },
+    "mid": {
+      "n": 2629,
+      "p10": 92394,
+      "p25": 109520,
+      "median": 141300,
+      "p75": 164079,
+      "p90": 180420,
+      "mean": 138068
+    },
+    "principal": {
+      "n": 1458,
+      "p10": 125798,
+      "p25": 136500,
+      "median": 157000,
+      "p75": 185314,
+      "p90": 222370,
+      "mean": 167096
+    },
+    "senior": {
+      "n": 8937,
+      "p10": 104807,
+      "p25": 118706,
+      "median": 138258,
+      "p75": 165000,
+      "p90": 198608,
+      "mean": 146219
+    },
+    "staff": {
+      "n": 1348,
+      "p10": 142314,
+      "p25": 159198,
+      "median": 187950,
+      "p75": 224715,
+      "p90": 261454,
+      "mean": 197185
+    },
+    "unlabelled": {
+      "n": 20265,
+      "p10": 86965,
+      "p25": 101350,
+      "median": 118456,
+      "p75": 157560,
+      "p90": 201143,
+      "mean": 134297
+    }
+  },
+  "by_seniority_core_soc": {
+    "architect": {
+      "n": 903,
+      "p10": 111128,
+      "p25": 126250,
+      "median": 145642,
+      "p75": 166767,
+      "p90": 189678,
+      "mean": 149174
+    },
+    "junior": {
+      "n": 438,
+      "p10": 100000,
+      "p25": 110788,
+      "median": 129000,
+      "p75": 135375,
+      "p90": 149556,
+      "mean": 124685
+    },
+    "lead": {
+      "n": 1882,
+      "p10": 105986,
+      "p25": 125541,
+      "median": 146632,
+      "p75": 164909,
+      "p90": 186960,
+      "mean": 146632
+    },
+    "manager": {
+      "n": 1662,
+      "p10": 128600,
+      "p25": 146000,
+      "median": 162400,
+      "p75": 189000,
+      "p90": 217000,
+      "mean": 170117
+    },
+    "mid": {
+      "n": 1650,
+      "p10": 106324,
+      "p25": 129667,
+      "median": 153866,
+      "p75": 170000,
+      "p90": 184000,
+      "mean": 149009
+    },
+    "principal": {
+      "n": 1063,
+      "p10": 126672,
+      "p25": 138317,
+      "median": 157000,
+      "p75": 187574,
+      "p90": 223280,
+      "mean": 168260
+    },
+    "senior": {
+      "n": 6447,
+      "p10": 109924,
+      "p25": 121268,
+      "median": 140000,
+      "p75": 167260,
+      "p90": 201053,
+      "mean": 149098
+    },
+    "staff": {
+      "n": 1117,
+      "p10": 144373,
+      "p25": 160000,
+      "median": 188100,
+      "p75": 220700,
+      "p90": 260000,
+      "mean": 196023
+    },
+    "unlabelled": {
+      "n": 14926,
+      "p10": 90000,
+      "p25": 104499,
+      "median": 120536,
+      "p75": 160805,
+      "p90": 205482,
+      "mean": 136969
+    }
+  },
+  "by_soc_title": {
+    "Computer Network Architects": {
+      "n": 341,
+      "p10": 112029,
+      "p25": 125000,
+      "median": 147597,
+      "p75": 171725,
+      "p90": 205216,
+      "mean": 152733
+    },
+    "Computer Network Support Specialists": {
+      "n": 64,
+      "p10": 66157,
+      "p25": 78270,
+      "median": 93756,
+      "p75": 130564,
+      "p90": 165000,
+      "mean": 105805
+    },
+    "Computer Occupations, All Other": {
+      "n": 6102,
+      "p10": 86445,
+      "p25": 94869,
+      "median": 120013,
+      "p75": 150000,
+      "p90": 183000,
+      "mean": 130008
+    },
+    "Computer Programmers": {
+      "n": 1782,
+      "p10": 76315,
+      "p25": 80000,
+      "median": 98301,
+      "p75": 115000,
+      "p90": 131346,
+      "mean": 102259
+    },
+    "Computer Systems Analysts": {
+      "n": 1601,
+      "p10": 88026,
+      "p25": 98758,
+      "median": 115170,
+      "p75": 135000,
+      "p90": 160684,
+      "mean": 119344
+    },
+    "Computer and Information Research Scientists": {
+      "n": 492,
+      "p10": 120935,
+      "p25": 156831,
+      "median": 185723,
+      "p75": 224097,
+      "p90": 266970,
+      "mean": 197553
+    },
+    "Data Scientists": {
+      "n": 3845,
+      "p10": 89586,
+      "p25": 105997,
+      "median": 134424,
+      "p75": 169541,
+      "p90": 200000,
+      "mean": 142248
+    },
+    "Database Administrators": {
+      "n": 991,
+      "p10": 87381,
+      "p25": 100000,
+      "median": 123136,
+      "p75": 148849,
+      "p90": 175000,
+      "mean": 127172
+    },
+    "Database Architects": {
+      "n": 768,
+      "p10": 113235,
+      "p25": 123149,
+      "median": 142958,
+      "p75": 163455,
+      "p90": 190000,
+      "mean": 146882
+    },
+    "Network and Computer Systems Administrators": {
+      "n": 764,
+      "p10": 81836,
+      "p25": 86991,
+      "median": 105051,
+      "p75": 127409,
+      "p90": 150000,
+      "mean": 111827
+    },
+    "Software Developers": {
+      "n": 25546,
+      "p10": 105980,
+      "p25": 116480,
+      "median": 145000,
+      "p75": 176000,
+      "p90": 212202,
+      "mean": 152290
+    },
+    "Software QA Analysts and Testers": {
+      "n": 2760,
+      "p10": 83200,
+      "p25": 91803,
+      "median": 110198,
+      "p75": 132110,
+      "p90": 161325,
+      "mean": 117640
+    }
+  },
+  "top_metros": [
+    {
+      "key": "Seattle, WA",
+      "n": 1733,
+      "p10": 117749,
+      "p25": 140000,
+      "median": 162200,
+      "p75": 180800,
+      "p90": 212202,
+      "mean": 164291
+    },
+    {
+      "key": "New York, NY",
+      "n": 1551,
+      "p10": 104100,
+      "p25": 131998,
+      "median": 165000,
+      "p75": 196345,
+      "p90": 229690,
+      "mean": 169514
+    },
+    {
+      "key": "Austin, TX",
+      "n": 1187,
+      "p10": 90605,
+      "p25": 114754,
+      "median": 132100,
+      "p75": 163550,
+      "p90": 179000,
+      "mean": 135792
+    },
+    {
+      "key": "Plano, TX",
+      "n": 1144,
+      "p10": 91374,
+      "p25": 105102,
+      "median": 118456,
+      "p75": 145000,
+      "p90": 170000,
+      "mean": 127290
+    },
+    {
+      "key": "Redmond, WA",
+      "n": 1047,
+      "p10": 117749,
+      "p25": 157000,
+      "median": 177406,
+      "p75": 195970,
+      "p90": 217889,
+      "mean": 174740
+    },
+    {
+      "key": "Sunnyvale, CA",
+      "n": 1025,
+      "p10": 131560,
+      "p25": 150080,
+      "median": 182092,
+      "p75": 214032,
+      "p90": 235000,
+      "mean": 184536
+    },
+    {
+      "key": "Irving, TX",
+      "n": 1001,
+      "p10": 90896,
+      "p25": 100000,
+      "median": 113000,
+      "p75": 140245,
+      "p90": 160000,
+      "mean": 123326
+    },
+    {
+      "key": "San Francisco, CA",
+      "n": 996,
+      "p10": 140000,
+      "p25": 167188,
+      "median": 194917,
+      "p75": 229000,
+      "p90": 266111,
+      "mean": 202121
+    },
+    {
+      "key": "Charlotte, NC",
+      "n": 913,
+      "p10": 86798,
+      "p25": 112424,
+      "median": 119392,
+      "p75": 140000,
+      "p90": 156145,
+      "mean": 123684
+    },
+    {
+      "key": "Bellevue, WA",
+      "n": 881,
+      "p10": 111550,
+      "p25": 137821,
+      "median": 163900,
+      "p75": 200100,
+      "p90": 231746,
+      "mean": 170932
+    },
+    {
+      "key": "Atlanta, GA",
+      "n": 818,
+      "p10": 86445,
+      "p25": 109283,
+      "median": 128626,
+      "p75": 149575,
+      "p90": 165000,
+      "mean": 127928
+    },
+    {
+      "key": "San Jose, CA",
+      "n": 783,
+      "p10": 130853,
+      "p25": 158944,
+      "median": 187741,
+      "p75": 219479,
+      "p90": 255260,
+      "mean": 191480
+    },
+    {
+      "key": "Chicago, IL",
+      "n": 658,
+      "p10": 85467,
+      "p25": 104728,
+      "median": 125332,
+      "p75": 153317,
+      "p90": 180397,
+      "mean": 130080
+    },
+    {
+      "key": "Santa Clara, CA",
+      "n": 657,
+      "p10": 135989,
+      "p25": 156000,
+      "median": 186826,
+      "p75": 213512,
+      "p90": 253457,
+      "mean": 191177
+    },
+    {
+      "key": "Dallas, TX",
+      "n": 639,
+      "p10": 92375,
+      "p25": 112923,
+      "median": 129022,
+      "p75": 156998,
+      "p90": 172091,
+      "mean": 132046
+    },
+    {
+      "key": "Alpharetta, GA",
+      "n": 532,
+      "p10": 86445,
+      "p25": 102652,
+      "median": 113931,
+      "p75": 140000,
+      "p90": 159677,
+      "mean": 123743
+    },
+    {
+      "key": "Mountain View, CA",
+      "n": 529,
+      "p10": 152370,
+      "p25": 178130,
+      "median": 200000,
+      "p75": 228000,
+      "p90": 255610,
+      "mean": 206905
+    },
+    {
+      "key": "Jersey City, NJ",
+      "n": 500,
+      "p10": 98301,
+      "p25": 117892,
+      "median": 141750,
+      "p75": 169541,
+      "p90": 189592,
+      "mean": 145247
+    },
+    {
+      "key": "Westlake, TX",
+      "n": 457,
+      "p10": 108437,
+      "p25": 112923,
+      "median": 126000,
+      "p75": 136578,
+      "p90": 156998,
+      "mean": 125956
+    },
+    {
+      "key": "Houston, TX",
+      "n": 452,
+      "p10": 80974,
+      "p25": 96200,
+      "median": 108243,
+      "p75": 135512,
+      "p90": 158222,
+      "mean": 118006
+    },
+    {
+      "key": "Durham, NC",
+      "n": 400,
+      "p10": 113847,
+      "p25": 116709,
+      "median": 125119,
+      "p75": 139214,
+      "p90": 161741,
+      "mean": 130281
+    },
+    {
+      "key": "Frisco, TX",
+      "n": 390,
+      "p10": 92581,
+      "p25": 112923,
+      "median": 118456,
+      "p75": 140000,
+      "p90": 160200,
+      "mean": 130609
+    },
+    {
+      "key": "San Diego, CA",
+      "n": 384,
+      "p10": 114252,
+      "p25": 130187,
+      "median": 155960,
+      "p75": 171600,
+      "p90": 184974,
+      "mean": 151777
+    },
+    {
+      "key": "Phoenix, AZ",
+      "n": 372,
+      "p10": 87651,
+      "p25": 96273,
+      "median": 114908,
+      "p75": 135000,
+      "p90": 157934,
+      "mean": 119744
+    },
+    {
+      "key": "Menlo Park, CA",
+      "n": 362,
+      "p10": 174460,
+      "p25": 193312,
+      "median": 222489,
+      "p75": 235853,
+      "p90": 263803,
+      "mean": 219815
+    }
+  ],
+  "top_employers": [
+    {
+      "key": "AMAZON.COM SERVICES LLC",
+      "n": 1633,
+      "p10": 120752,
+      "p25": 139298,
+      "median": 162200,
+      "p75": 180710,
+      "p90": 202600,
+      "mean": 161755
+    },
+    {
+      "key": "COGNIZANT TECHNOLOGY SOLUTIONS US CORP",
+      "n": 1336,
+      "p10": 88088,
+      "p25": 101504,
+      "median": 114712,
+      "p75": 128877,
+      "p90": 144310,
+      "mean": 116380
+    },
+    {
+      "key": "MICROSOFT CORPORATION",
+      "n": 1109,
+      "p10": 150290,
+      "p25": 164000,
+      "median": 180710,
+      "p75": 200000,
+      "p90": 222726,
+      "mean": 183992
+    },
+    {
+      "key": "TATA CONSULTANCY SERVICES LIMITED",
+      "n": 723,
+      "p10": 76606,
+      "p25": 82867,
+      "median": 91811,
+      "p75": 97469,
+      "p90": 113439,
+      "mean": 92751
+    },
+    {
+      "key": "APPLE INC.",
+      "n": 637,
+      "p10": 147754,
+      "p25": 163550,
+      "median": 184974,
+      "p75": 207392,
+      "p90": 227639,
+      "mean": 188005
+    },
+    {
+      "key": "INFOSYS LIMITED",
+      "n": 633,
+      "p10": 80974,
+      "p25": 86445,
+      "median": 93538,
+      "p75": 114795,
+      "p90": 126818,
+      "mean": 100781
+    },
+    {
+      "key": "META PLATFORMS, INC",
+      "n": 617,
+      "p10": 182002,
+      "p25": 207502,
+      "median": 223335,
+      "p75": 245588,
+      "p90": 266312,
+      "mean": 224298
+    },
+    {
+      "key": "DELOITTE CONSULTING LLP",
+      "n": 616,
+      "p10": 94390,
+      "p25": 114590,
+      "median": 143062,
+      "p75": 163550,
+      "p90": 189646,
+      "mean": 141876
+    },
+    {
+      "key": "GOOGLE LLC",
+      "n": 609,
+      "p10": 158000,
+      "p25": 173000,
+      "median": 194630,
+      "p75": 228000,
+      "p90": 245200,
+      "mean": 203926
+    },
+    {
+      "key": "ERNST & YOUNG U.S. LLP",
+      "n": 605,
+      "p10": 107990,
+      "p25": 127800,
+      "median": 155926,
+      "p75": 193078,
+      "p90": 220175,
+      "mean": 161339
+    },
+    {
+      "key": "FIDELITY TECHNOLOGY GROUP, LLC D/B/A FIDELITY INVESTMENTS",
+      "n": 510,
+      "p10": 112923,
+      "p25": 116709,
+      "median": 125119,
+      "p75": 140150,
+      "p90": 157248,
+      "mean": 129437
+    },
+    {
+      "key": "AMAZON WEB SERVICES, INC.",
+      "n": 495,
+      "p10": 117480,
+      "p25": 134836,
+      "median": 158200,
+      "p75": 177600,
+      "p90": 194860,
+      "mean": 157034
+    },
+    {
+      "key": "COMPUNNEL SOFTWARE GROUP, INC",
+      "n": 447,
+      "p10": 92450,
+      "p25": 102250,
+      "median": 114000,
+      "p75": 132000,
+      "p90": 132000,
+      "mean": 115067
+    },
+    {
+      "key": "JPMORGAN CHASE & CO.",
+      "n": 437,
+      "p10": 131000,
+      "p25": 143000,
+      "median": 161600,
+      "p75": 180000,
+      "p90": 195000,
+      "mean": 162799
+    },
+    {
+      "key": "CAPGEMINI AMERICA INC",
+      "n": 386,
+      "p10": 104494,
+      "p25": 117416,
+      "median": 130707,
+      "p75": 145610,
+      "p90": 160805,
+      "mean": 132377
+    },
+    {
+      "key": "PEOPLE TECH GROUP, INC",
+      "n": 350,
+      "p10": 83824,
+      "p25": 106454,
+      "median": 117749,
+      "p75": 140452,
+      "p90": 150758,
+      "mean": 127402
+    },
+    {
+      "key": "WIPRO LIMITED",
+      "n": 318,
+      "p10": 86400,
+      "p25": 91818,
+      "median": 108000,
+      "p75": 127581,
+      "p90": 147065,
+      "mean": 112985
+    },
+    {
+      "key": "MPHASIS CORPORATION",
+      "n": 297,
+      "p10": 84202,
+      "p25": 100000,
+      "median": 120000,
+      "p75": 135000,
+      "p90": 147000,
+      "mean": 117884
+    },
+    {
+      "key": "WAL-MART ASSOCIATES, INC.",
+      "n": 291,
+      "p10": 117000,
+      "p25": 134486,
+      "median": 150080,
+      "p75": 165731,
+      "p90": 185587,
+      "mean": 152000
+    },
+    {
+      "key": "SALESFORCE, INC.",
+      "n": 281,
+      "p10": 150000,
+      "p25": 174171,
+      "median": 210000,
+      "p75": 237564,
+      "p90": 275000,
+      "mean": 209244
+    },
+    {
+      "key": "LTIMINDTREE LIMITED",
+      "n": 260,
+      "p10": 81765,
+      "p25": 90927,
+      "median": 99798,
+      "p75": 111551,
+      "p90": 131997,
+      "mean": 102179
+    },
+    {
+      "key": "ACCENTURE LLP",
+      "n": 257,
+      "p10": 116500,
+      "p25": 128461,
+      "median": 145100,
+      "p75": 167400,
+      "p90": 191220,
+      "mean": 149494
+    },
+    {
+      "key": "AMAZON DEVELOPMENT CENTER U.S., INC.",
+      "n": 245,
+      "p10": 127286,
+      "p25": 143700,
+      "median": 156600,
+      "p75": 177400,
+      "p90": 195840,
+      "mean": 160227
+    },
+    {
+      "key": "LINKEDIN CORPORATION",
+      "n": 225,
+      "p10": 139000,
+      "p25": 153000,
+      "median": 180710,
+      "p75": 207000,
+      "p90": 225714,
+      "mean": 181752
+    },
+    {
+      "key": "HCL AMERICA INC",
+      "n": 217,
+      "p10": 98293,
+      "p25": 111862,
+      "median": 122637,
+      "p75": 135512,
+      "p90": 150162,
+      "mean": 124950
+    },
+    {
+      "key": "CITIBANK, N.A.",
+      "n": 216,
+      "p10": 141475,
+      "p25": 150000,
+      "median": 158306,
+      "p75": 172175,
+      "p90": 189592,
+      "mean": 163737
+    },
+    {
+      "key": "NVIDIA CORPORATION",
+      "n": 215,
+      "p10": 148000,
+      "p25": 173279,
+      "median": 190819,
+      "p75": 212202,
+      "p90": 264514,
+      "mean": 193735
+    },
+    {
+      "key": "IBM CORPORATION",
+      "n": 156,
+      "p10": 105557,
+      "p25": 122610,
+      "median": 153076,
+      "p75": 191475,
+      "p90": 241898,
+      "mean": 162734
+    },
+    {
+      "key": "CAPITAL ONE SERVICES, LLC",
+      "n": 143,
+      "p10": 109000,
+      "p25": 142986,
+      "median": 173000,
+      "p75": 204900,
+      "p90": 225400,
+      "mean": 173311
+    },
+    {
+      "key": "MORGAN STANLEY SERVICES GROUP INC.",
+      "n": 135,
+      "p10": 136200,
+      "p25": 151000,
+      "median": 165000,
+      "p75": 182500,
+      "p90": 203000,
+      "mean": 177196
+    }
+  ],
+  "attested_minus_prevailing": {
+    "n": 45079,
+    "median": 1923,
+    "p25": 0,
+    "p75": 19413,
+    "share_at_or_below_prevailing": 0.4022
+  },
+  "methodology_notes": [
+    "Wages are annualised with 2080 hours per year for hourly filings.",
+    "WAGE_RATE_OF_PAY_FROM is the bottom of the attested range; it is the figure the employer is legally bound to meet, so it is a floor, not a midpoint.",
+    "Seniority is inferred from the employer's own JOB_TITLE text, not from any standardised level. 'unlabelled' means the title carried no seniority word.",
+    "These are base wages. Equity and bonus are not part of an LCA attestation, so totals here are not comparable to survey figures that include them.",
+    "H-1B filings skew toward larger employers and tech-dense metros, and toward roles companies choose to sponsor. This is not a sample of all US software jobs.",
+    "All personal columns in the source file (employer and attorney contacts) are discarded on read and appear nowhere in this output."
+  ]
+}
