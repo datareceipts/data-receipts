@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Data Receipts</title>
+<meta name="description" content="Privacy policy for the Data Receipts website and its YouTube publishing application.">
+<style>
+  :root{--bg:#0B0D10; --fg:#E8EAED; --dim:#9AA1A9; --accent:#00E5A0; --rule:#20242A; color-scheme:dark}
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px; margin:0 auto; padding:64px 20px 80px}
+  .mark{font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 20px}
+  .mark a{color:var(--accent); text-decoration:none}
+  h1{font-size:clamp(26px,5vw,34px); line-height:1.2; margin:0 0 8px; letter-spacing:-.02em}
+  .date{color:var(--dim); font-size:14px; margin:0 0 44px}
+  h2{font-size:17px; margin:40px 0 12px; letter-spacing:-.01em}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px; padding-left:22px; color:var(--fg)}
+  li{margin-bottom:8px}
+  a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
+  a:hover{border-bottom-color:var(--accent)}
+  .note{border-left:2px solid var(--rule); padding:2px 0 2px 16px; color:var(--dim); margin:0 0 14px}
+  footer{margin-top:52px; padding-top:24px; border-top:1px solid var(--rule);
+    color:var(--dim); font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="mark"><a href="./">Data Receipts</a></p>
+  <h1>Privacy Policy</h1>
+  <p class="date">Last updated 2 November 2026</p>
+
+  <p>This policy covers two things: this website, and the private application used to
+     publish videos to the Data Receipts YouTube channel.</p>
+
+  <h2>This website</h2>
+  <p>This site is a set of static pages. It sets no cookies, runs no analytics, embeds no
+     trackers, and has no accounts, forms or comment system. Nothing you do here is
+     recorded by us.</p>
+  <p class="note">The site is hosted on GitHub Pages. As the host, GitHub receives standard
+     web server request data such as your IP address and browser user agent. That data is
+     handled under
+     <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's
+     privacy statement</a> and is not accessible to us.</p>
+
+  <h2>The publishing application</h2>
+  <p>Video publishing and analytics review are automated by a private command-line
+     application that is not distributed and has no users other than the channel operator.
+     It authorises against Google using OAuth 2.0 and requests these scopes:</p>
+  <ul>
+    <li><code>youtube.upload</code> — to upload video files to the operator's own channel.</li>
+    <li><code>youtube</code> — to set titles, descriptions, tags and thumbnails on those uploads.</li>
+    <li><code>yt-analytics.readonly</code> — to read performance statistics for the operator's own channel.</li>
+  </ul>
+
+  <h2>What the application does with that access</h2>
+  <ul>
+    <li>It accesses exactly one YouTube channel: the operator's own.</li>
+    <li>It reads aggregate channel statistics — views, watch time, average view duration,
+        traffic sources. These contain no information identifying individual viewers, and
+        no viewer-level data is ever requested.</li>
+    <li>Its OAuth credentials are stored only on the operator's own computer, in a file
+        readable solely by that user account, and are excluded from version control.</li>
+    <li>Nothing obtained through these scopes is sold, shared, transferred, or used for
+        advertising or profiling. There is no server, no database, and no third party
+        receiving any of it.</li>
+  </ul>
+  <p>Use of information received from Google APIs adheres to the
+     <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API
+     Services User Data Policy</a>, including its Limited Use requirements.</p>
+
+  <h2>Published datasets</h2>
+  <p>The datasets published alongside each video contain vendor pricing figures, public
+     statistical releases, and measurements taken from software run by the operator. They
+     contain no personal data. Where raw output could include local system details such as
+     file paths or usernames, those are removed before publication.</p>
+
+  <h2>Children</h2>
+  <p>This content is made for a professional and adult audience. The channel is not directed
+     to children and no information is knowingly collected from them.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the revised version will be posted here with an updated date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy:
+     <a href="mailto:datareceipts.yt@gmail.com">datareceipts.yt@gmail.com</a></p>
+
+  <footer><a href="./">← Data Receipts</a></footer>
+
+</div>
+</body>
+</html>

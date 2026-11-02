@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Receipts</title>
+<meta name="description" content="Original data analysis on cloud pricing, AI costs, and the tech industry. Every number is reproducible — the dataset and collection script ship with every video.">
+<style>
+  :root{
+    --bg:#0B0D10; --fg:#E8EAED; --dim:#9AA1A9;
+    --accent:#00E5A0; --warn:#FF4D4D; --rule:#20242A;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 20px}
+  header{padding-block:72px 48px; border-bottom:1px solid var(--rule)}
+  .mark{
+    font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 20px;
+  }
+  h1{font-size:clamp(30px,5.5vw,44px); line-height:1.15; margin:0 0 20px; letter-spacing:-.02em}
+  .lede{font-size:19px; color:var(--dim); margin:0; max-width:34em}
+  section{padding-block:48px; border-bottom:1px solid var(--rule)}
+  h2{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim);
+     margin:0 0 20px; font-weight:600}
+  p{margin:0 0 16px}
+  p:last-child{margin-bottom:0}
+  ul{margin:0; padding:0; list-style:none}
+  li{padding:14px 0; border-bottom:1px solid var(--rule); display:flex; gap:14px; align-items:baseline}
+  li:last-child{border-bottom:0; padding-bottom:0}
+  .n{color:var(--accent); font-variant-numeric:tabular-nums; font-weight:600; flex:none; min-width:1.4em}
+  a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
+  a:hover{border-bottom-color:var(--accent)}
+  .rule-list li{display:block}
+  .rule-list strong{display:block; color:var(--fg); margin-bottom:3px; font-weight:600}
+  .rule-list span{color:var(--dim); font-size:15px}
+  footer{padding-block:40px 72px; color:var(--dim); font-size:14px}
+  footer a{color:var(--dim)} footer a:hover{color:var(--accent); border-bottom-color:var(--accent)}
+  .sep{margin:0 8px; opacity:.4}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="mark">Data Receipts</p>
+    <h1>Don't trust the video. Run the script.</h1>
+    <p class="lede">Original data analysis on cloud pricing, AI costs, and the economics of
+      building software — where the numbers come from primary sources, not from
+      someone else's blog post.</p>
+  </header>
+
+  <section>
+    <h2>The method</h2>
+    <ul class="rule-list">
+      <li><strong>Primary sources only</strong><span>Prices come from vendor pricing APIs. Wages come from government statistical releases. Token counts come from running the thing and measuring it.</span></li>
+      <li><strong>Every number is reproducible</strong><span>The dataset and the collection script for each video are published. You can re-run them and get the same figures, or find out that I was wrong.</span></li>
+      <li><strong>Comparisons are normalised</strong><span>Free tiers, regional differences and billing-unit mismatches are reconciled before anything is compared, and the adjustments are documented.</span></li>
+      <li><strong>Unmeasurable claims get cut</strong><span>If a number can't be sourced or measured, it doesn't go in the video — even when it would make a better headline.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Topics</h2>
+    <ul>
+      <li><span class="n">01</span><span>Cloud pricing — what the bill actually looks like versus the list price</span></li>
+      <li><span class="n">02</span><span>AI and LLM economics — token costs, context overhead, real workload pricing</span></li>
+      <li><span class="n">03</span><span>Industry data — compensation, hiring, and tooling adoption from official sources</span></li>
+      <li><span class="n">04</span><span>Developer tooling — measured claims about what actually saves time</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where to find it</h2>
+    <p><a href="https://www.youtube.com/@datareceipts">YouTube — @datareceipts</a><br>
+       <span style="color:var(--dim)">The videos.</span></p>
+    <p><a href="https://github.com/datareceipts/data-receipts">GitHub — datareceipts/data-receipts</a><br>
+       <span style="color:var(--dim)">The datasets and collection scripts behind every video.</span></p>
+  </section>
+
+  <footer>
+    <a href="./privacy.html">Privacy</a>
+    <span class="sep">·</span>
+    <a href="mailto:datareceipts.yt@gmail.com">datareceipts.yt@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
