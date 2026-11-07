@@ -542,6 +542,6 @@
    "what_each_row_is": "An employer's legal attestation of the wage it will pay for one named role at one named worksite."
   },
   "price_parities": "BEA Regional Price Parities by MSA (table MARPP), year 2024, via BEA Data API \u2014 https://apps.bea.gov/api/",
-  "crosswalk": "Hand-built city->MSA table in crosswalk.json; county-to-MSA assignment per Census 2023 delineation"
+  "crosswalk": "Hand-built city\u2192MSA table in crosswalk.json; county-to-MSA assignment per Census 2023 delineation"
  }
 }

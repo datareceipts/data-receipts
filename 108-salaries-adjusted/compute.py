@@ -177,7 +177,7 @@ def main():
         "sources": {
             "wages": sal["source"],
             "price_parities": rpp["source"],
-            "crosswalk": ("Hand-built city->MSA table in crosswalk.json; "
+            "crosswalk": ("Hand-built city→MSA table in crosswalk.json; "
                           "county-to-MSA assignment per Census 2023 delineation"),
         },
     }
