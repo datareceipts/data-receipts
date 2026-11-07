@@ -1,0 +1,89 @@
+{
+  "retrieved": "2026-11-07",
+  "spec": {
+    "ram_gb": 8,
+    "storage_gb": 100,
+    "nodes": 1,
+    "hours": 730
+  },
+  "fx": {
+    "rate": 1.1165,
+    "date": "2026-11-06",
+    "source": "ECB daily euro foreign exchange reference rate"
+  },
+  "aws_rds": {
+    "instance": "db.m6g.large",
+    "sku": "NW6VUGAHAQ6UY55B",
+    "usd_hour": 0.159,
+    "vcpu": "2",
+    "memory": "8 GiB",
+    "storage": {
+      "usd_gb_month": 0.115,
+      "volume_type": "General Purpose-GP3"
+    },
+    "source": "AWS Price List API, AmazonRDS us-east-1",
+    "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/us-east-1/index.json"
+  },
+  "vendors": {
+    "_comment": "Transcribed from each vendor's own public pricing page on 2026-11-07. None of these four publishes a machine-readable price list. Every figure is checkable at the url given.",
+    "retrieved": "2026-11-07",
+    "rows": [
+      {
+        "vendor": "DigitalOcean",
+        "plan": "Managed PostgreSQL, 8 GiB",
+        "vcpu": 4,
+        "ram_gb": 8,
+        "storage_included_gb": 140,
+        "monthly_usd": 122.1,
+        "storage_extra_usd_gb": 0.215,
+        "url": "https://www.digitalocean.com/pricing/managed-databases",
+        "note": "storage 140-280 GiB included in the plan; 4 vCPU, more than the spec needs"
+      },
+      {
+        "vendor": "Supabase",
+        "plan": "Pro + Large compute",
+        "vcpu": 2,
+        "ram_gb": 8,
+        "storage_included_gb": 8,
+        "base_monthly_usd": 25.0,
+        "compute_monthly_usd": 110.0,
+        "compute_credit_usd": 10.0,
+        "storage_extra_usd_gb": 0.125,
+        "url": "https://supabase.com/pricing",
+        "note": "Pro plan includes $10/mo of compute credit, applied against the add-on"
+      },
+      {
+        "vendor": "Neon",
+        "plan": "Launch, 2 CU always-on",
+        "vcpu": 2,
+        "ram_gb": 8,
+        "storage_included_gb": 0,
+        "compute_usd_cu_hour": 0.106,
+        "compute_units": 2,
+        "storage_extra_usd_gb": 0.35,
+        "url": "https://neon.com/pricing",
+        "note": "1 CU = 1 vCPU + 4 GB, so 8 GB is 2 CU. Suspended compute is free, so an always-on figure is the worst case for Neon"
+      },
+      {
+        "vendor": "Hetzner (self-managed)",
+        "plan": "CCX23",
+        "vcpu": 4,
+        "ram_gb": 16,
+        "storage_included_gb": 160,
+        "monthly_eur": 86.49,
+        "url": "https://www.hetzner.com/cloud/general-purpose/",
+        "note": "dedicated vCPU; exceeds the spec on RAM and storage. Price excludes VAT. You run Postgres yourself"
+      },
+      {
+        "vendor": "Hetzner (self-managed)",
+        "plan": "CCX13",
+        "vcpu": 2,
+        "ram_gb": 8,
+        "storage_included_gb": 80,
+        "monthly_eur": 43.49,
+        "url": "https://www.hetzner.com/cloud/general-purpose/",
+        "note": "meets RAM exactly but 80 GB storage is below the 100 GB spec \u2014 listed separately, not counted as a like-for-like row"
+      }
+    ]
+  }
+}
