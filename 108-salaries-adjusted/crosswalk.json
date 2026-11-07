@@ -1,0 +1,31 @@
+{
+ "_note": "Hand-built city -> MSA crosswalk. LCA worksite data gives a city and state; BEA Regional Price Parities are published by Metropolitan Statistical Area. Every mapping below was assigned by looking up the city's county and that county's MSA in the Census 2023 delineation. It is a table and not code so it can be checked line by line.",
+ "_caveat": "An RPP is an MSA-wide price level. Mapping Mountain View onto the San Jose MSA applies the metro average, not Mountain View's own housing cost, so within-metro spread is flattened by construction.",
+ "map": {
+  "Seattle, WA":        {"msa": "42660", "county": "King County, WA"},
+  "Redmond, WA":        {"msa": "42660", "county": "King County, WA"},
+  "Bellevue, WA":       {"msa": "42660", "county": "King County, WA"},
+  "New York, NY":       {"msa": "35620", "county": "New York County, NY"},
+  "Jersey City, NJ":    {"msa": "35620", "county": "Hudson County, NJ"},
+  "Austin, TX":         {"msa": "12420", "county": "Travis County, TX"},
+  "Dallas, TX":         {"msa": "19100", "county": "Dallas County, TX"},
+  "Irving, TX":         {"msa": "19100", "county": "Dallas County, TX"},
+  "Plano, TX":          {"msa": "19100", "county": "Collin County, TX"},
+  "Frisco, TX":         {"msa": "19100", "county": "Collin County, TX"},
+  "Westlake, TX":       {"msa": "19100", "county": "Tarrant County, TX"},
+  "San Francisco, CA":  {"msa": "41860", "county": "San Francisco County, CA"},
+  "Menlo Park, CA":     {"msa": "41860", "county": "San Mateo County, CA"},
+  "San Jose, CA":       {"msa": "41940", "county": "Santa Clara County, CA"},
+  "Sunnyvale, CA":      {"msa": "41940", "county": "Santa Clara County, CA"},
+  "Santa Clara, CA":    {"msa": "41940", "county": "Santa Clara County, CA"},
+  "Mountain View, CA":  {"msa": "41940", "county": "Santa Clara County, CA"},
+  "San Diego, CA":      {"msa": "41740", "county": "San Diego County, CA"},
+  "Charlotte, NC":      {"msa": "16740", "county": "Mecklenburg County, NC"},
+  "Durham, NC":         {"msa": "20500", "county": "Durham County, NC"},
+  "Atlanta, GA":        {"msa": "12060", "county": "Fulton County, GA"},
+  "Alpharetta, GA":     {"msa": "12060", "county": "Fulton County, GA"},
+  "Chicago, IL":        {"msa": "16980", "county": "Cook County, IL"},
+  "Houston, TX":        {"msa": "26420", "county": "Harris County, TX"},
+  "Phoenix, AZ":        {"msa": "38060", "county": "Maricopa County, AZ"}
+ }
+}
