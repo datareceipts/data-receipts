@@ -31,10 +31,27 @@ def main():
 
     rows.sort(key=lambda r: r["monthly"])
     cheap, dear = rows[0], rows[-1]
-    egress = h["aws"]["egress"]
+    egress = egress_src = h["aws"]["egress"]
+
+    # How the bill moves with traffic. Capped at the smallest included allowance
+    # (Hetzner's 2 TB) because past that the other two start charging overage and
+    # I have no sourced overage rate for either -- extrapolating there would be
+    # inventing numbers. Within the cap, both are genuinely flat.
+    cap_gb = min(ven.get("egress_included_gb", 0) for ven in v["vendors"])
+    base_aws = round(h["aws_total"] - egress_src["monthly"], 2)
+    scale = []
+    for gb in (SPEC_EGRESS := [h["spec"]["egress_gb"], 1000, cap_gb]):
+        billable = max(0, gb - egress_src["free_gb"])
+        a = round(base_aws + billable * egress_src["usd_per_gb"], 2)
+        scale.append({"egress_gb": gb, "aws": a,
+                      **{r["vendor"]: r["monthly"] for r in rows if r["vendor"] != "AWS"},
+                      "spread_vs_cheapest": round(a / cheap["monthly"], 2)})
 
     out = {
-        "retrieved": h["retrieved"], "spec": h["spec"], "fx": h["fx"],
+        "retrieved": h["retrieved"],
+        "scaling": {"cap_gb": cap_gb, "cap_reason":
+                    "smallest included traffic allowance among the non-AWS rows",
+                    "rows": scale}, "spec": h["spec"], "fx": h["fx"],
         "rows": rows,
         "cheapest": cheap["vendor"], "cheapest_total": cheap["monthly"],
         "dearest": dear["vendor"], "dearest_total": dear["monthly"],
@@ -63,6 +80,12 @@ def main():
           f"{out['egress_vs_cheapest_total']}% of the entire {cheap['vendor']} bill")
     print(f"  Egress is {out['aws_egress_share_pct']}% of the AWS bill; "
           f"without it AWS is ${out['aws_without_egress']:,.2f}")
+    print(f"\n  scaling with traffic (capped at {cap_gb} GB, {out['scaling']['cap_reason']}):")
+    for r in scale:
+        others = "  ".join(f"{k} ${r[k]:,.2f}" for k in r
+                           if k not in ("egress_gb", "aws", "spread_vs_cheapest"))
+        print(f"    {r['egress_gb']:>5} GB  AWS ${r['aws']:>8,.2f}   {others}"
+              f"   = {r['spread_vs_cheapest']}x")
 
 
 if __name__ == "__main__":

@@ -26,6 +26,20 @@ of the AWS bill**, and it is the single reason the gap exists at this size.
 Both of the other two include far more transfer than the spec uses (Hetzner 2 TB,
 DigitalOcean 4 TB), so the 500 GB is free at both.
 
+## It gets worse with traffic
+
+Only one of these bills moves when the site grows:
+
+| Egress/month | AWS | DigitalOcean | Hetzner | Spread |
+|---|---|---|---|---|
+| 500 GB | $96.03 | $54.45 | $36.37 | 2.64× |
+| 1 TB | $141.03 | $54.45 | $36.37 | 3.88× |
+| 2 TB | $231.03 | $54.45 | $36.37 | **6.35×** |
+
+Capped at 2 TB on purpose: that is Hetzner's included allowance, and past it
+they bill overage at a rate I could not find a clean public figure for. The gap
+keeps widening beyond that point; I just can't say by how much without guessing.
+
 ## Spec first, prices second
 
 `spec.json` is fixed before any price is looked up, and it is in the repo so you

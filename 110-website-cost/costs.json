@@ -1,5 +1,32 @@
 {
  "retrieved": "2026-11-09",
+ "scaling": {
+  "cap_gb": 2000,
+  "cap_reason": "smallest included traffic allowance among the non-AWS rows",
+  "rows": [
+   {
+    "egress_gb": 500,
+    "aws": 96.03,
+    "Hetzner": 36.37,
+    "DigitalOcean": 54.45,
+    "spread_vs_cheapest": 2.64
+   },
+   {
+    "egress_gb": 1000,
+    "aws": 141.03,
+    "Hetzner": 36.37,
+    "DigitalOcean": 54.45,
+    "spread_vs_cheapest": 3.88
+   },
+   {
+    "egress_gb": 2000,
+    "aws": 231.03,
+    "Hetzner": 36.37,
+    "DigitalOcean": 54.45,
+    "spread_vs_cheapest": 6.35
+   }
+  ]
+ },
  "spec": {
   "_note": "One concrete website, priced identically everywhere. Vague specs are how cost comparisons get rigged, so this is fixed before any price is looked up.",
   "name": "A small production web app",
