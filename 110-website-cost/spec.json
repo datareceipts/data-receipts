@@ -1,0 +1,15 @@
+{
+ "_note": "One concrete website, priced identically everywhere. Vague specs are how cost comparisons get rigged, so this is fixed before any price is looked up.",
+ "name": "A small production web app",
+ "compute": {"vcpu": 2, "ram_gb": 4, "hours": 730},
+ "database": {"engine": "postgres", "ram_gb": 2, "storage_gb": 20},
+ "egress_gb": 500,
+ "storage_gb": 50,
+ "assumptions": [
+  "Always-on, not scale-to-zero — a site that sleeps is a different product.",
+  "One region, US East, no multi-region or HA.",
+  "Managed Postgres where the provider sells it; self-managed on the same box where they do not.",
+  "500 GB/month egress is the figure used in video 103, kept for comparability.",
+  "No CDN tier, no WAF, no support plan."
+ ]
+}

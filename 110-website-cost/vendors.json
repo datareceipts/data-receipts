@@ -1,0 +1,33 @@
+{
+ "_note": "Providers without a price API, transcribed from their pricing pages with the date read. Each row must meet or beat spec.json; where a plan overshoots, the overshoot is recorded rather than quietly ignored.",
+ "vendors": [
+  {
+   "vendor": "DigitalOcean",
+   "read_on": "2026-11-09",
+   "region": "US",
+   "lines": [
+    {"item": "Droplet 2 vCPU / 4 GiB, 80 GiB SSD", "monthly": 24.00,
+     "source": "https://www.digitalocean.com/pricing/droplets",
+     "note": "includes 4,000 GiB transfer, so the spec's 500 GB egress is free"},
+    {"item": "Managed PostgreSQL 2 GiB / 1 vCPU / 30 GiB", "monthly": 30.45,
+     "source": "https://www.digitalocean.com/pricing/managed-databases"}
+   ],
+   "egress_included_gb": 4000,
+   "overshoot": "DB has 1 vCPU where the spec is silent on DB vCPU; storage 30 GiB against the 20 GB asked."
+  },
+  {
+   "vendor": "Hetzner",
+   "read_on": "2026-11-09",
+   "region": "US (Ashburn / Hillsboro)",
+   "currency": "EUR",
+   "lines": [
+    {"item": "CPX21 3 vCPU / 4 GB / 80 GB NVMe", "monthly_eur": 32.49,
+     "source": "https://www.hetzner.com/cloud/regular-performance/",
+     "note": "includes 2 TB traffic, so the spec's 500 GB egress is free. Prices exclude VAT."}
+   ],
+   "egress_included_gb": 2000,
+   "self_managed_db": true,
+   "overshoot": "Smallest US plan meeting 4 GB RAM is 3 vCPU, one more than the spec asks. No managed Postgres offered in the US region, so the database runs on the same box — which the spec permits but is not the same product as a managed one."
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "retrieved": "2026-11-09",
+ "spec": {
+  "_note": "One concrete website, priced identically everywhere. Vague specs are how cost comparisons get rigged, so this is fixed before any price is looked up.",
+  "name": "A small production web app",
+  "compute": {
+   "vcpu": 2,
+   "ram_gb": 4,
+   "hours": 730
+  },
+  "database": {
+   "engine": "postgres",
+   "ram_gb": 2,
+   "storage_gb": 20
+  },
+  "egress_gb": 500,
+  "storage_gb": 50,
+  "assumptions": [
+   "Always-on, not scale-to-zero \u2014 a site that sleeps is a different product.",
+   "One region, US East, no multi-region or HA.",
+   "Managed Postgres where the provider sells it; self-managed on the same box where they do not.",
+   "500 GB/month egress is the figure used in video 103, kept for comparability.",
+   "No CDN tier, no WAF, no support plan."
+  ]
+ },
+ "fx": {
+  "rate": 1.1193,
+  "date": "2026-11-09",
+  "source": "ECB daily euro foreign exchange reference rate"
+ },
+ "rows": [
+  {
+   "vendor": "Hetzner",
+   "monthly": 36.37,
+   "region": "US (Ashburn / Hillsboro)",
+   "lines": [
+    {
+     "item": "CPX21 3 vCPU / 4 GB / 80 GB NVMe",
+     "monthly": 36.37
+    }
+   ],
+   "egress_cost": 0.0,
+   "self_managed_db": true,
+   "overshoot": "Smallest US plan meeting 4 GB RAM is 3 vCPU, one more than the spec asks. No managed Postgres offered in the US region, so the database runs on the same box \u2014 which the spec permits but is not the same product as a managed one."
+  },
+  {
+   "vendor": "DigitalOcean",
+   "monthly": 54.45,
+   "region": "US",
+   "lines": [
+    {
+     "item": "Droplet 2 vCPU / 4 GiB, 80 GiB SSD",
+     "monthly": 24.0
+    },
+    {
+     "item": "Managed PostgreSQL 2 GiB / 1 vCPU / 30 GiB",
+     "monthly": 30.45
+    }
+   ],
+   "egress_cost": 0.0,
+   "self_managed_db": false,
+   "overshoot": "DB has 1 vCPU where the spec is silent on DB vCPU; storage 30 GiB against the 20 GB asked."
+  },
+  {
+   "vendor": "AWS",
+   "monthly": 96.03,
+   "region": "us-east-1",
+   "lines": [
+    {
+     "item": "EBS gp3 50 GB",
+     "monthly": 4.0
+    },
+    {
+     "item": "t3.medium",
+     "monthly": 30.37
+    },
+    {
+     "item": "RDS gp3 20 GB",
+     "monthly": 2.3
+    },
+    {
+     "item": "db.t4g.small",
+     "monthly": 23.36
+    },
+    {
+     "item": "500 GB out",
+     "monthly": 36.0
+    }
+   ],
+   "egress_cost": 36.0,
+   "self_managed_db": false
+  }
+ ],
+ "cheapest": "Hetzner",
+ "cheapest_total": 36.37,
+ "dearest": "AWS",
+ "dearest_total": 96.03,
+ "spread": 2.64,
+ "gap_month": 59.66,
+ "gap_year": 715.92,
+ "aws_egress": 36.0,
+ "egress_vs_cheapest_total": 99,
+ "aws_egress_share_pct": 37.5,
+ "aws_without_egress": 60.03,
+ "sources": {
+  "aws_ec2": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json",
+  "aws_rds": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/us-east-1/index.json",
+  "fx": "ECB daily reference rate, data-api.ecb.europa.eu",
+  "digitalocean_1": "https://www.digitalocean.com/pricing/droplets (read 2026-11-09)",
+  "digitalocean_2": "https://www.digitalocean.com/pricing/managed-databases (read 2026-11-09)",
+  "hetzner_1": "https://www.hetzner.com/cloud/regular-performance/ (read 2026-11-09)"
+ }
+}
