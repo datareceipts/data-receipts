@@ -77,8 +77,25 @@ def main():
     hl_month_cheap = round(hl["cheapest"]["usd"] * HOURS)
     hl_month_dear = round(hl["dearest"]["usd"] * HOURS)
 
+    # Does the gap widen on the scarcer chip? Comparing the H100 group's spread
+    # against the A100 group's does not answer that, because the groups contain
+    # different vendors. Hold one pair of vendors fixed across both chips instead.
+    def pair(group_key, a, b):
+        g = out_groups[group_key]
+        va = next((r for r in g["per_vendor"] if r["vendor"] == a), None)
+        vb = next((r for r in g["per_vendor"] if r["vendor"] == b), None)
+        if not va or not vb:
+            return None
+        return {"group": group_key, "low_vendor": a, "low": va["usd"],
+                "high_vendor": b, "high": vb["usd"],
+                "spread": round(vb["usd"] / va["usd"], 2)}
+
+    A, B = "RunPod (Community)", "AWS"
+    held = [x for x in (pair("H100 SXM 80GB", A, B), pair("A100 SXM 80GB", A, B)) if x]
+
     out = {
         "retrieved": h["retrieved"],
+        "vendor_pair_held": {"low_vendor": A, "high_vendor": B, "groups": held},
         "hours_per_month": HOURS,
         "headline_group": headline_key,
         "headline": {
@@ -107,6 +124,9 @@ def main():
         for r in g["rows"]:
             eff = "" if r["effective"] == "current" else f"  [from {r['effective']}]"
             print(f"    ${r['usd']:>6,.2f}/GPU-hr  {r['vendor']:<20} {r['label']}{eff}")
+    for x in held:
+        print(f"\n  held pair {A} vs {B} on {x['group']}: "
+              f"${x['low']} vs ${x['high']} = {x['spread']}x")
     H = out["headline"]
     print(f"\n  HEADLINE — {headline_key}: ${H['cheapest']} ({H['cheapest_vendor']}) "
           f"to ${H['dearest']} ({H['dearest_vendor']}) = {H['spread']}x")

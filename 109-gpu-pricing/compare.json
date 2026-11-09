@@ -1,5 +1,27 @@
 {
  "retrieved": "2026-11-09",
+ "vendor_pair_held": {
+  "low_vendor": "RunPod (Community)",
+  "high_vendor": "AWS",
+  "groups": [
+   {
+    "group": "H100 SXM 80GB",
+    "low_vendor": "RunPod (Community)",
+    "low": 2.69,
+    "high_vendor": "AWS",
+    "high": 6.88,
+    "spread": 2.56
+   },
+   {
+    "group": "A100 SXM 80GB",
+    "low_vendor": "RunPod (Community)",
+    "low": 1.39,
+    "high_vendor": "AWS",
+    "high": 3.4309,
+    "spread": 2.47
+   }
+  ]
+ },
  "hours_per_month": 730,
  "headline_group": "H100 SXM 80GB",
  "headline": {
