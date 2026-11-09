@@ -1,0 +1,115 @@
+{
+ "retrieved": "2026-11-09",
+ "rows": [
+  {
+   "vendor": "AWS",
+   "instance": "p4d.24xlarge",
+   "gpu": "A100 SXM",
+   "gpu_memory_gb": 40,
+   "gpu_count": 8,
+   "usd_per_hour": 21.957642,
+   "usd_per_gpu_hour": 2.7447,
+   "region": "us-east-1"
+  },
+  {
+   "vendor": "AWS",
+   "instance": "p4de.24xlarge",
+   "gpu": "A100 SXM",
+   "gpu_memory_gb": 80,
+   "gpu_count": 8,
+   "usd_per_hour": 27.44705,
+   "usd_per_gpu_hour": 3.4309,
+   "region": "us-east-1"
+  },
+  {
+   "vendor": "AWS",
+   "instance": "p5.48xlarge",
+   "gpu": "H100 SXM",
+   "gpu_memory_gb": 80,
+   "gpu_count": 8,
+   "usd_per_hour": 55.04,
+   "usd_per_gpu_hour": 6.88,
+   "region": "us-east-1"
+  },
+  {
+   "vendor": "Azure",
+   "instance": "Standard_NC24ads_A100_v4",
+   "gpu": "A100 PCIe",
+   "gpu_memory_gb": 80,
+   "gpu_count": 1,
+   "usd_per_hour": 3.673,
+   "usd_per_gpu_hour": 3.673,
+   "region": "eastus"
+  },
+  {
+   "vendor": "Azure",
+   "instance": "Standard_NC40ads_H100_v5",
+   "gpu": "H100 NVL",
+   "gpu_memory_gb": 94,
+   "gpu_count": 1,
+   "usd_per_hour": 6.98,
+   "usd_per_gpu_hour": 6.98,
+   "region": "eastus"
+  },
+  {
+   "vendor": "Azure",
+   "instance": "Standard_NC48ads_A100_v4",
+   "gpu": "A100 PCIe",
+   "gpu_memory_gb": 80,
+   "gpu_count": 2,
+   "usd_per_hour": 9.554,
+   "usd_per_gpu_hour": 4.777,
+   "region": "eastus"
+  },
+  {
+   "vendor": "Azure",
+   "instance": "Standard_NC80adis_H100_v5",
+   "gpu": "H100 NVL",
+   "gpu_memory_gb": 94,
+   "gpu_count": 2,
+   "usd_per_hour": 17.64,
+   "usd_per_gpu_hour": 8.82,
+   "region": "eastus"
+  },
+  {
+   "vendor": "Azure",
+   "instance": "Standard_NC96ads_A100_v4",
+   "gpu": "A100 PCIe",
+   "gpu_memory_gb": 80,
+   "gpu_count": 4,
+   "usd_per_hour": 19.108,
+   "usd_per_gpu_hour": 4.777,
+   "region": "eastus"
+  },
+  {
+   "vendor": "Azure",
+   "instance": "Standard_ND96asr_A100_v4",
+   "gpu": "A100 SXM",
+   "gpu_memory_gb": 40,
+   "gpu_count": 8,
+   "usd_per_hour": 27.197,
+   "usd_per_gpu_hour": 3.3996,
+   "region": "eastus"
+  },
+  {
+   "vendor": "Azure",
+   "instance": "Standard_ND96isr_H100_v5",
+   "gpu": "H100 SXM",
+   "gpu_memory_gb": 80,
+   "gpu_count": 8,
+   "usd_per_hour": 98.32,
+   "usd_per_gpu_hour": 12.29,
+   "region": "eastus"
+  }
+ ],
+ "missing": [],
+ "sources": {
+  "aws_prices": "AWS Price List, https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json",
+  "azure_prices": "Azure Retail Prices API, https://prices.azure.com/api/retail/prices",
+  "aws_p5_spec": "https://aws.amazon.com/ec2/instance-types/p5/",
+  "aws_p4_spec": "https://aws.amazon.com/ec2/instance-types/p4/",
+  "azure_nd_h100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ndh100v5-series",
+  "azure_nc_h100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ncadsh100v5-series",
+  "azure_nc_a100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nca100v4-series"
+ }
+}

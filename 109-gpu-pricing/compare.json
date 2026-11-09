@@ -1,0 +1,665 @@
+{
+ "retrieved": "2026-11-09",
+ "hours_per_month": 730,
+ "headline_group": "H100 SXM 80GB",
+ "headline": {
+  "gpu": "H100 SXM",
+  "memory_gb": 80,
+  "cheapest_vendor": "RunPod (Community)",
+  "cheapest": 2.69,
+  "dearest_vendor": "Azure",
+  "dearest": 12.29,
+  "spread": 4.57,
+  "gap_per_hour": 9.6,
+  "companies": [
+   "AWS",
+   "Azure",
+   "RunPod"
+  ],
+  "n_companies": 3,
+  "month_cheap": 1964,
+  "month_dear": 8972,
+  "month_gap": 7008,
+  "n_offers": 4
+ },
+ "groups": {
+  "A100 SXM 40GB": {
+   "gpu": "A100 SXM",
+   "memory_gb": 40,
+   "n_offers": 3,
+   "rows": [
+    {
+     "vendor": "Lambda",
+     "label": "Lambda",
+     "gpu": "A100 SXM",
+     "mem": 40,
+     "n": 1,
+     "usd": 1.99,
+     "effective": "2026-11-16",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "AWS",
+     "label": "p4d.24xlarge",
+     "gpu": "A100 SXM",
+     "mem": 40,
+     "n": 8,
+     "usd": 2.7447,
+     "effective": "current",
+     "kind": "hyperscaler"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_ND96asr_A100_v4",
+     "gpu": "A100 SXM",
+     "mem": 40,
+     "n": 8,
+     "usd": 3.3996,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "n_current": 2,
+   "per_vendor": [
+    {
+     "vendor": "AWS",
+     "label": "p4d.24xlarge",
+     "gpu": "A100 SXM",
+     "mem": 40,
+     "n": 8,
+     "usd": 2.7447,
+     "effective": "current",
+     "kind": "hyperscaler"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_ND96asr_A100_v4",
+     "gpu": "A100 SXM",
+     "mem": 40,
+     "n": 8,
+     "usd": 3.3996,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "companies": [
+    "AWS",
+    "Azure"
+   ],
+   "cheapest": {
+    "vendor": "AWS",
+    "label": "p4d.24xlarge",
+    "gpu": "A100 SXM",
+    "mem": 40,
+    "n": 8,
+    "usd": 2.7447,
+    "effective": "current",
+    "kind": "hyperscaler"
+   },
+   "dearest": {
+    "vendor": "Azure",
+    "label": "Standard_ND96asr_A100_v4",
+    "gpu": "A100 SXM",
+    "mem": 40,
+    "n": 8,
+    "usd": 3.3996,
+    "effective": "current",
+    "kind": "hyperscaler"
+   },
+   "spread": 1.24,
+   "gap_per_hour": 0.65
+  },
+  "A100 SXM 80GB": {
+   "gpu": "A100 SXM",
+   "memory_gb": 80,
+   "n_offers": 4,
+   "rows": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "A100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.39,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "A100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.79,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "Lambda",
+     "label": "Lambda",
+     "gpu": "A100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 3.19,
+     "effective": "2026-11-16",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "AWS",
+     "label": "p4de.24xlarge",
+     "gpu": "A100 SXM",
+     "mem": 80,
+     "n": 8,
+     "usd": 3.4309,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "n_current": 3,
+   "per_vendor": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "A100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.39,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "A100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.79,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "AWS",
+     "label": "p4de.24xlarge",
+     "gpu": "A100 SXM",
+     "mem": 80,
+     "n": 8,
+     "usd": 3.4309,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "companies": [
+    "AWS",
+    "RunPod"
+   ],
+   "cheapest": {
+    "vendor": "RunPod (Community)",
+    "label": "RunPod (Community)",
+    "gpu": "A100 SXM",
+    "mem": 80,
+    "n": 1,
+    "usd": 1.39,
+    "effective": "current",
+    "kind": "neocloud"
+   },
+   "dearest": {
+    "vendor": "AWS",
+    "label": "p4de.24xlarge",
+    "gpu": "A100 SXM",
+    "mem": 80,
+    "n": 8,
+    "usd": 3.4309,
+    "effective": "current",
+    "kind": "hyperscaler"
+   },
+   "spread": 2.47,
+   "gap_per_hour": 2.04
+  },
+  "H100 SXM 80GB": {
+   "gpu": "H100 SXM",
+   "memory_gb": 80,
+   "n_offers": 5,
+   "rows": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 2.69,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 3.99,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "Lambda",
+     "label": "Lambda",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 4.59,
+     "effective": "2026-11-16",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "AWS",
+     "label": "p5.48xlarge",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 8,
+     "usd": 6.88,
+     "effective": "current",
+     "kind": "hyperscaler"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_ND96isr_H100_v5",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 8,
+     "usd": 12.29,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "n_current": 4,
+   "per_vendor": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 2.69,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 1,
+     "usd": 3.99,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "AWS",
+     "label": "p5.48xlarge",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 8,
+     "usd": 6.88,
+     "effective": "current",
+     "kind": "hyperscaler"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_ND96isr_H100_v5",
+     "gpu": "H100 SXM",
+     "mem": 80,
+     "n": 8,
+     "usd": 12.29,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "companies": [
+    "AWS",
+    "Azure",
+    "RunPod"
+   ],
+   "cheapest": {
+    "vendor": "RunPod (Community)",
+    "label": "RunPod (Community)",
+    "gpu": "H100 SXM",
+    "mem": 80,
+    "n": 1,
+    "usd": 2.69,
+    "effective": "current",
+    "kind": "neocloud"
+   },
+   "dearest": {
+    "vendor": "Azure",
+    "label": "Standard_ND96isr_H100_v5",
+    "gpu": "H100 SXM",
+    "mem": 80,
+    "n": 8,
+    "usd": 12.29,
+    "effective": "current",
+    "kind": "hyperscaler"
+   },
+   "spread": 4.57,
+   "gap_per_hour": 9.6
+  },
+  "A100 PCIe 80GB": {
+   "gpu": "A100 PCIe",
+   "memory_gb": 80,
+   "n_offers": 5,
+   "rows": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.19,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.79,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_NC24ads_A100_v4",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 3.673,
+     "effective": "current",
+     "kind": "hyperscaler"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_NC48ads_A100_v4",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 2,
+     "usd": 4.777,
+     "effective": "current",
+     "kind": "hyperscaler"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_NC96ads_A100_v4",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 4,
+     "usd": 4.777,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "n_current": 5,
+   "per_vendor": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.19,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.79,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_NC24ads_A100_v4",
+     "gpu": "A100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 3.673,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "companies": [
+    "Azure",
+    "RunPod"
+   ],
+   "cheapest": {
+    "vendor": "RunPod (Community)",
+    "label": "RunPod (Community)",
+    "gpu": "A100 PCIe",
+    "mem": 80,
+    "n": 1,
+    "usd": 1.19,
+    "effective": "current",
+    "kind": "neocloud"
+   },
+   "dearest": {
+    "vendor": "Azure",
+    "label": "Standard_NC24ads_A100_v4",
+    "gpu": "A100 PCIe",
+    "mem": 80,
+    "n": 1,
+    "usd": 3.673,
+    "effective": "current",
+    "kind": "hyperscaler"
+   },
+   "spread": 3.09,
+   "gap_per_hour": 2.48
+  },
+  "H100 NVL 94GB": {
+   "gpu": "H100 NVL",
+   "memory_gb": 94,
+   "n_offers": 4,
+   "rows": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "H100 NVL",
+     "mem": 94,
+     "n": 1,
+     "usd": 2.59,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "H100 NVL",
+     "mem": 94,
+     "n": 1,
+     "usd": 3.19,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_NC40ads_H100_v5",
+     "gpu": "H100 NVL",
+     "mem": 94,
+     "n": 1,
+     "usd": 6.98,
+     "effective": "current",
+     "kind": "hyperscaler"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_NC80adis_H100_v5",
+     "gpu": "H100 NVL",
+     "mem": 94,
+     "n": 2,
+     "usd": 8.82,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "n_current": 4,
+   "per_vendor": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "H100 NVL",
+     "mem": 94,
+     "n": 1,
+     "usd": 2.59,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "H100 NVL",
+     "mem": 94,
+     "n": 1,
+     "usd": 3.19,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "Azure",
+     "label": "Standard_NC40ads_H100_v5",
+     "gpu": "H100 NVL",
+     "mem": 94,
+     "n": 1,
+     "usd": 6.98,
+     "effective": "current",
+     "kind": "hyperscaler"
+    }
+   ],
+   "companies": [
+    "Azure",
+    "RunPod"
+   ],
+   "cheapest": {
+    "vendor": "RunPod (Community)",
+    "label": "RunPod (Community)",
+    "gpu": "H100 NVL",
+    "mem": 94,
+    "n": 1,
+    "usd": 2.59,
+    "effective": "current",
+    "kind": "neocloud"
+   },
+   "dearest": {
+    "vendor": "Azure",
+    "label": "Standard_NC40ads_H100_v5",
+    "gpu": "H100 NVL",
+    "mem": 94,
+    "n": 1,
+    "usd": 6.98,
+    "effective": "current",
+    "kind": "hyperscaler"
+   },
+   "spread": 2.69,
+   "gap_per_hour": 4.39
+  },
+  "H100 PCIe 80GB": {
+   "gpu": "H100 PCIe",
+   "memory_gb": 80,
+   "n_offers": 3,
+   "rows": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "H100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.99,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "H100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 2.89,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "Lambda",
+     "label": "Lambda",
+     "gpu": "H100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 3.79,
+     "effective": "2026-11-16",
+     "kind": "neocloud"
+    }
+   ],
+   "n_current": 2,
+   "per_vendor": [
+    {
+     "vendor": "RunPod (Community)",
+     "label": "RunPod (Community)",
+     "gpu": "H100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 1.99,
+     "effective": "current",
+     "kind": "neocloud"
+    },
+    {
+     "vendor": "RunPod (Secure)",
+     "label": "RunPod (Secure)",
+     "gpu": "H100 PCIe",
+     "mem": 80,
+     "n": 1,
+     "usd": 2.89,
+     "effective": "current",
+     "kind": "neocloud"
+    }
+   ],
+   "companies": [
+    "RunPod"
+   ],
+   "cheapest": {
+    "vendor": "RunPod (Community)",
+    "label": "RunPod (Community)",
+    "gpu": "H100 PCIe",
+    "mem": 80,
+    "n": 1,
+    "usd": 1.99,
+    "effective": "current",
+    "kind": "neocloud"
+   },
+   "dearest": {
+    "vendor": "RunPod (Secure)",
+    "label": "RunPod (Secure)",
+    "gpu": "H100 PCIe",
+    "mem": 80,
+    "n": 1,
+    "usd": 2.89,
+    "effective": "current",
+    "kind": "neocloud"
+   },
+   "spread": 1.45,
+   "gap_per_hour": 0.9
+  }
+ },
+ "sources": {
+  "aws_prices": "AWS Price List, https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json",
+  "azure_prices": "Azure Retail Prices API, https://prices.azure.com/api/retail/prices",
+  "aws_p5_spec": "https://aws.amazon.com/ec2/instance-types/p5/",
+  "aws_p4_spec": "https://aws.amazon.com/ec2/instance-types/p4/",
+  "azure_nd_h100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ndh100v5-series",
+  "azure_nc_h100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ncadsh100v5-series",
+  "azure_nc_a100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nca100v4-series",
+  "vendor_1": "RunPod (Secure): https://www.runpod.io/pricing (read 2026-11-09)",
+  "vendor_2": "RunPod (Community): https://www.runpod.io/pricing (read 2026-11-09)",
+  "vendor_3": "Lambda: https://lambda.com/service/gpu-cloud (read 2026-11-09, effective 2026-11-16)"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "_note": "Neocloud prices are not available by API without an account, so these are transcribed from each vendor's public pricing page. The URL and the date read are recorded per vendor so every row can be checked.",
+ "vendors": [
+  {
+   "vendor": "RunPod (Secure)",
+   "source": "https://www.runpod.io/pricing",
+   "read_on": "2026-11-09",
+   "effective": "current",
+   "note": "Secure Cloud: RunPod-operated datacentres. Per-second billing, no commitment.",
+   "rows": [
+    {"gpu": "H100 SXM",  "gpu_memory_gb": 80, "usd_per_gpu_hour": 3.99},
+    {"gpu": "H100 PCIe", "gpu_memory_gb": 80, "usd_per_gpu_hour": 2.89},
+    {"gpu": "H100 NVL",  "gpu_memory_gb": 94, "usd_per_gpu_hour": 3.19},
+    {"gpu": "A100 PCIe", "gpu_memory_gb": 80, "usd_per_gpu_hour": 1.79},
+    {"gpu": "A100 SXM",  "gpu_memory_gb": 80, "usd_per_gpu_hour": 1.79}
+   ]
+  },
+  {
+   "vendor": "RunPod (Community)",
+   "source": "https://www.runpod.io/pricing",
+   "read_on": "2026-11-09",
+   "effective": "current",
+   "note": "Community Cloud: third-party hosts renting out their own hardware. Lower price, no datacentre SLA.",
+   "rows": [
+    {"gpu": "H100 SXM",  "gpu_memory_gb": 80, "usd_per_gpu_hour": 2.69},
+    {"gpu": "H100 PCIe", "gpu_memory_gb": 80, "usd_per_gpu_hour": 1.99},
+    {"gpu": "H100 NVL",  "gpu_memory_gb": 94, "usd_per_gpu_hour": 2.59},
+    {"gpu": "A100 PCIe", "gpu_memory_gb": 80, "usd_per_gpu_hour": 1.19},
+    {"gpu": "A100 SXM",  "gpu_memory_gb": 80, "usd_per_gpu_hour": 1.39}
+   ]
+  },
+  {
+   "vendor": "Lambda",
+   "source": "https://lambda.com/service/gpu-cloud",
+   "read_on": "2026-11-09",
+   "effective": "2026-11-16",
+   "note": "The published page states these rates take effect 2026-11-16 00:00 UTC; current rates are behind a login. Excluded from the headline spread for that reason, and shown separately. 8-GPU instance rates.",
+   "rows": [
+    {"gpu": "H100 SXM",  "gpu_memory_gb": 80, "usd_per_gpu_hour": 4.59},
+    {"gpu": "H100 PCIe", "gpu_memory_gb": 80, "usd_per_gpu_hour": 3.79},
+    {"gpu": "A100 SXM",  "gpu_memory_gb": 80, "usd_per_gpu_hour": 3.19},
+    {"gpu": "A100 SXM",  "gpu_memory_gb": 40, "usd_per_gpu_hour": 1.99}
+   ]
+  }
+ ]
+}
