@@ -1,0 +1,22 @@
+{
+ "_note": "One fixed monitoring workload, written down before any vendor page was opened. Monitoring pricing is unusually easy to rig because every vendor meters a different unit, so the workload is specified in units no vendor uses and then translated to each vendor's meter.",
+ "name": "A small production system, monitored",
+ "hosts": 10,
+ "containers": 50,
+ "custom_metric_series": 10000,
+ "logs_gb_per_month": 100,
+ "log_retention_days": 15,
+ "apm_hosts": 10,
+ "traces_gb_per_month": 20,
+ "seats": 5,
+ "synthetic_checks": {"count": 10, "interval_minutes": 5},
+ "months": 1,
+ "assumptions": [
+  "Annual-commit pricing where the vendor publishes it, because that is the number on their pricing page; the on-demand figure is recorded alongside where it differs.",
+  "One region, US. No enterprise tier, no negotiated discount, no private pricing.",
+  "Containers are counted because several vendors meter them separately from hosts; where a vendor bundles them, that is recorded rather than silently dropped.",
+  "10,000 custom metric series is the number to watch: it is the line item that is free on some plans and metered per-series on others.",
+  "Self-hosted options are excluded. Running your own Prometheus has a real cost that is mostly your time, and this compares what vendors charge, not what monitoring costs."
+ ],
+ "sweep_custom_metrics": [0, 1000, 10000, 50000, 100000]
+}
