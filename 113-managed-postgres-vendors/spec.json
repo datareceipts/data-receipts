@@ -1,0 +1,20 @@
+{
+ "_note": "One fixed Postgres workload, committed before any price was looked up. Video 107 compared managed against self-hosted; this compares managed against managed, which is a different question and has a different answer.",
+ "name": "A production Postgres database",
+ "vcpu": 2,
+ "ram_gb": 8,
+ "storage_gb": 100,
+ "hours": 730,
+ "egress_gb": 50,
+ "backup_retention_days": 7,
+ "high_availability": false,
+ "compute_hours_active": 730,
+ "assumptions": [
+  "Always on. Scale-to-zero changes the answer completely and is handled as its own sweep rather than folded into the headline.",
+  "One region, US East. No read replicas, no multi-AZ, no reserved or committed-use pricing.",
+  "Where a vendor bundles storage or egress into a plan, the bundle is recorded and the overshoot noted rather than silently credited.",
+  "Postgres only. Vendors selling a Postgres-compatible engine rather than Postgres are marked as such.",
+  "Backups at 7 days retention where the vendor charges for them separately."
+ ],
+ "sweep_active_hours": [73, 182, 365, 730]
+}
