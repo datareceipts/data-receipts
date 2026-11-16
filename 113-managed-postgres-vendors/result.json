@@ -1,0 +1,87 @@
+{
+ "burstable_note": 94.17,
+ "cheapest": "AWS RDS",
+ "crossover_against": "AWS RDS",
+ "dearest": "Neon",
+ "generated": "2026-11-16",
+ "headline": {
+  "AWS RDS": {
+   "compute": 116.07,
+   "egress": 0.0,
+   "plan": 0.0,
+   "storage": 11.5,
+   "total": 127.57
+  },
+  "Azure Flexible Server": {
+   "compute": 129.94,
+   "egress": 0.0,
+   "plan": 0.0,
+   "storage": 11.5,
+   "total": 141.44
+  },
+  "Neon": {
+   "compute": 154.76,
+   "egress": 0.0,
+   "plan": 0.0,
+   "storage": 35.0,
+   "total": 189.76
+  },
+  "Supabase": {
+   "compute": 100.0,
+   "egress": 0.0,
+   "plan": 25.0,
+   "storage": 11.5,
+   "total": 136.5
+  }
+ },
+ "neon_crossover_hours": 437,
+ "neon_crossover_pct": 60,
+ "sources": {
+  "aws_egress": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json",
+  "aws_rds": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/us-east-1/index.json",
+  "azure": "https://prices.azure.com/api/retail/prices (serviceName=Azure Database for PostgreSQL, eastus)",
+  "vendors": "vendors.json, see read_on"
+ },
+ "spec": "A production Postgres database",
+ "spread": 1.49,
+ "sweep": {
+  "hours": [
+   73,
+   182,
+   365,
+   730
+  ],
+  "totals": {
+   "AWS RDS": [
+    127.57,
+    127.57,
+    127.57,
+    127.57
+   ],
+   "Azure Flexible Server": [
+    141.44,
+    141.44,
+    141.44,
+    141.44
+   ],
+   "Neon": [
+    50.48,
+    73.58,
+    112.38,
+    189.76
+   ],
+   "Supabase": [
+    136.5,
+    136.5,
+    136.5,
+    136.5
+   ]
+  },
+  "winner": [
+   "Neon",
+   "Neon",
+   "Neon",
+   "AWS RDS"
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "_note": "Vendors without a price API, transcribed from their own pricing pages with the date read.",
+ "read_on": "2026-11-16",
+ "vendors": [
+  {
+   "vendor": "Neon",
+   "plan": "Launch",
+   "source": "https://neon.com/pricing",
+   "model": "per compute-hour",
+   "cu_definition": "1 CU = 1 vCPU + 4 GB RAM, so the spec's 2 vCPU / 8 GB is 2 CU",
+   "cu_per_hour": 0.106,
+   "storage_gb_month": 0.35,
+   "storage_included_gb": 0,
+   "egress_included_gb": 500,
+   "egress_per_gb": 0.10,
+   "scales_to_zero": true,
+   "note": "Idle compute suspends and accrues no CU-hours; storage is billed regardless. Suspend delay is 5 minutes on Launch and can be disabled."
+  },
+  {
+   "vendor": "Supabase",
+   "plan": "Pro + Large compute add-on",
+   "source": "https://supabase.com/pricing",
+   "model": "flat plan plus compute add-on",
+   "plan_fee_month": 25.00,
+   "compute_addon_month": 110.00,
+   "compute_addon_detail": "Large: 2 vCPU dedicated, 8 GB RAM",
+   "compute_credit_month": 10.00,
+   "storage_included_gb": 8,
+   "storage_gb_month": 0.125,
+   "egress_included_gb": 250,
+   "egress_per_gb": 0.09,
+   "scales_to_zero": false
+  }
+ ],
+ "excluded": [
+  {
+   "item": "AWS db.t4g.large",
+   "why": "Burstable: sustained CPU above a baseline is throttled or billed as credits, so it is not the same product as the fixed-performance instance the spec asks for. Its $94.17 is collected and reported alongside, not substituted in.",
+   "checked_on": "2026-11-16"
+  },
+  {
+   "item": "Google Cloud SQL",
+   "why": "The Cloud Billing Catalog API returns 403 without an API key, same as in video 111. No key, no numbers.",
+   "checked_on": "2026-11-16"
+  }
+ ]
+}

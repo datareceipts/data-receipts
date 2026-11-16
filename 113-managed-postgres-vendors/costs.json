@@ -1,0 +1,41 @@
+{
+ "aws": {
+  "db.m6g.large": {
+   "detail": "2 vCPU / 8 GiB",
+   "monthly": 116.07,
+   "usd_per_hour": 0.159
+  },
+  "db.t4g.large": {
+   "detail": "2 vCPU / 8 GiB",
+   "monthly": 94.17,
+   "usd_per_hour": 0.129
+  },
+  "storage": {
+   "monthly": 11.5,
+   "usd_per_gb_month": 0.115
+  }
+ },
+ "azure": {
+  "backup_per_gb": 0.095,
+  "compute": {
+   "monthly": 129.94,
+   "sku": "Azure Database for PostgreSQL Flexible Server General Purpose Ddsv5 Series Compute",
+   "usd_per_hour": 0.178
+  },
+  "storage": {
+   "monthly": 11.5,
+   "usd_per_gb_month": 0.115
+  }
+ },
+ "egress": {
+  "free_gb": 100,
+  "usd_per_gb": 0.09
+ },
+ "generated": "2026-11-16",
+ "sources": {
+  "aws_egress": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json",
+  "aws_rds": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/us-east-1/index.json",
+  "azure": "https://prices.azure.com/api/retail/prices (serviceName=Azure Database for PostgreSQL, eastus)"
+ },
+ "spec": "A production Postgres database"
+}
