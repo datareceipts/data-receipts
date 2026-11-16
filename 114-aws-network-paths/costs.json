@@ -1,0 +1,32 @@
+{
+ "cross_region_per_gb": 0.02,
+ "cross_region_to": "US West (Oregon)",
+ "free_egress_gb": 100,
+ "generated": "2026-11-16",
+ "internet_per_gb": 0.09,
+ "internet_tier": "0-10240 GB",
+ "intra_region_variants": {
+  "IntraRegion": {
+   "description": "$0.010 per GB - regional data transfer - in/out/between EC2 AZs or using elastic IPs or ELB",
+   "usagetype": "DataTransfer-Regional-Bytes",
+   "usd_per_gb": 0.01
+  },
+  "IntraRegion-xAZ-In": {
+   "description": "$0.00 per GB - regional data transfer - in/out/between EC2 Azs or using elastic IPs or ELB",
+   "usagetype": "USE1-DataTransfer-xAZ-In-Bytes",
+   "usd_per_gb": 0.0
+  },
+  "IntraRegion-xAZ-Out": {
+   "description": "$0.00 per GB - regional data transfer - in/out/between EC2 Azs or using elastic IPs or ELB",
+   "usagetype": "USE1-DataTransfer-xAZ-Out-Bytes",
+   "usd_per_gb": 0.0
+  }
+ },
+ "nat_per_gb": 0.045,
+ "nat_per_hour": 0.045,
+ "sources": {
+  "nat": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json (productFamily=NAT Gateway)",
+  "transfer": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json"
+ },
+ "spec": "One terabyte of traffic, five destinations"
+}

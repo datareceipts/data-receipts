@@ -1,0 +1,77 @@
+{
+ "cheapest_paid": "Another instance, another AZ",
+ "cheapest_paid_total": 20.48,
+ "cross_az_total": 20.48,
+ "dearest": "The internet, via NAT Gateway",
+ "dearest_total": 162.09,
+ "generated": "2026-11-16",
+ "internet_total": 83.16,
+ "intra_region_variants": {
+  "IntraRegion": {
+   "description": "$0.010 per GB - regional data transfer - in/out/between EC2 AZs or using elastic IPs or ELB",
+   "usagetype": "DataTransfer-Regional-Bytes",
+   "usd_per_gb": 0.01
+  },
+  "IntraRegion-xAZ-In": {
+   "description": "$0.00 per GB - regional data transfer - in/out/between EC2 Azs or using elastic IPs or ELB",
+   "usagetype": "USE1-DataTransfer-xAZ-In-Bytes",
+   "usd_per_gb": 0.0
+  },
+  "IntraRegion-xAZ-Out": {
+   "description": "$0.00 per GB - regional data transfer - in/out/between EC2 Azs or using elastic IPs or ELB",
+   "usagetype": "USE1-DataTransfer-xAZ-Out-Bytes",
+   "usd_per_gb": 0.0
+  }
+ },
+ "nat_fixed": 32.85,
+ "nat_fixed_3az": 98.55,
+ "nat_surcharge": 78.93,
+ "nat_surcharge_pct": 95,
+ "rows": [
+  {
+   "fixed": 0.0,
+   "id": "same_az",
+   "label": "Another instance, same AZ",
+   "note": "private IP, in-zone",
+   "total": 0.0,
+   "transfer": 0.0
+  },
+  {
+   "fixed": 0.0,
+   "id": "cross_az",
+   "label": "Another instance, another AZ",
+   "note": "$0.01/GB each way, both sides billed",
+   "total": 20.48,
+   "transfer": 20.48
+  },
+  {
+   "fixed": 0.0,
+   "id": "cross_region",
+   "label": "Another region (US West (Oregon))",
+   "note": "outbound only",
+   "total": 20.48,
+   "transfer": 20.48
+  },
+  {
+   "fixed": 0.0,
+   "id": "internet",
+   "label": "The internet, public subnet",
+   "note": "first 100 GB free",
+   "total": 83.16,
+   "transfer": 83.16
+  },
+  {
+   "fixed": 32.85,
+   "id": "internet_nat",
+   "label": "The internet, via NAT Gateway",
+   "note": "egress + NAT processing + NAT hours",
+   "total": 162.09,
+   "transfer": 129.24
+  }
+ ],
+ "sources": {
+  "nat": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json (productFamily=NAT Gateway)",
+  "transfer": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json"
+ },
+ "volume_gb": 1024
+}
