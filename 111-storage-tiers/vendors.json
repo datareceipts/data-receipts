@@ -1,0 +1,41 @@
+{
+ "_note": "Prices with no usable API, transcribed from the vendor's own page with the date read. Nothing here is from memory.",
+ "vendors": [
+  {
+   "vendor": "Cloudflare R2",
+   "read_on": "2026-11-16",
+   "source": "https://developers.cloudflare.com/r2/pricing/",
+   "storage_gb_mo": 0.015,
+   "egress_usd_per_gb": 0.0,
+   "class_a_per_million": 4.50,
+   "class_b_per_million": 0.36,
+   "free": {"storage_gb": 10, "class_a": 1000000, "class_b": 10000000},
+   "note": "Egress is free only when the object is served through R2's own S3 API, Workers binding or r2.dev domain. Another metered service in front of the bucket bills its own egress."
+  },
+  {
+   "vendor": "Backblaze B2",
+   "read_on": "2026-11-16",
+   "source": "https://www.backblaze.com/cloud-storage/pricing",
+   "storage_tb_mo": 6.95,
+   "storage_gb_mo_derived": 0.00695,
+   "derived": "The page quotes $6.95/TB/month and gives no per-GB figure. 0.00695 is that divided by 1000, not a number Backblaze publishes.",
+   "egress_usd_per_gb": 0.01,
+   "free_egress_multiple_of_stored": 3,
+   "free": {"storage_gb": 10},
+   "class_abc_requests": "free for pay-as-you-go",
+   "note": "Free egress is 3x average monthly stored data, so at 1 TB stored the first 3 TB out each month cost nothing."
+  }
+ ],
+ "excluded": [
+  {
+   "item": "S3 Glacier Deep Archive — storage rate",
+   "why": "AWS does not publish a Glacier Deep Archive storage rate in any machine-readable feed reachable without credentials. Checked: the S3 price list for us-east-1, us-west-2 and eu-west-1 (no TimedStorage-GDA-ByteHrs SKU in any of them), the static feed behind AWS's own S3 pricing page, and the separate Glacier feed. The only $0.00099/GB-Mo in those files belongs to Intelligent-Tiering Deep Archive Access, a different product that carries the same rate today; quoting it as Deep Archive would be putting one product's price on another. Deep Archive RETRIEVAL rates are published ($0.02/GB standard, $0.0025/GB bulk) and are used where retrieval alone is discussed.",
+   "checked_on": "2026-11-16"
+  },
+  {
+   "item": "Google Cloud Storage",
+   "why": "The Cloud Billing Catalog API returns 403 without an API key, and the legacy public pricelist.json is gone (404). No key, no numbers.",
+   "checked_on": "2026-11-16"
+  }
+ ]
+}

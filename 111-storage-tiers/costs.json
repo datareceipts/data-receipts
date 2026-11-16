@@ -1,0 +1,128 @@
+{
+ "aws": {
+  "egress": {
+   "free_gb": 100,
+   "usd_per_gb": 0.09
+  },
+  "requests": {
+   "S3-API-GIR-Tier1": 2e-05,
+   "S3-API-GIR-Tier2": 1e-05,
+   "S3-API-SIA-Tier1": 1e-05,
+   "S3-API-SIA-Tier2": 1e-06,
+   "S3-API-Tier1": 5e-06,
+   "S3-API-Tier2": 4e-07
+  },
+  "restore_requests": {
+   "S3 Glacier Flexible Retrieval": {
+    "bulk": 0.0,
+    "standard": 5e-05
+   }
+  },
+  "retrieval_per_gb": {
+   "S3 Glacier Deep Archive": {
+    "bulk": 0.0025,
+    "standard": 0.02
+   },
+   "S3 Glacier Flexible Retrieval": {
+    "bulk": 0.0,
+    "standard": 0.01
+   },
+   "S3 Glacier Instant Retrieval": {
+    "standard": 0.03
+   },
+   "S3 Standard-IA": {
+    "standard": 0.01
+   }
+  },
+  "storage_gb_mo": {
+   "S3 Glacier Flexible Retrieval": 0.0036,
+   "S3 Glacier Instant Retrieval": 0.004,
+   "S3 Standard": 0.023,
+   "S3 Standard-IA": 0.0125
+  }
+ },
+ "azure": {
+  "blob": {
+   "Archive GRS": {
+    "read_10k": 5.0,
+    "retrieval": 0.02,
+    "stored": 0.00299,
+    "write_10k": 0.21
+   },
+   "Archive LRS": {
+    "read_10k": 5.0,
+    "retrieval": 0.02,
+    "stored": 0.00099,
+    "write_10k": 0.1
+   },
+   "Archive RA-GRS": {
+    "read_10k": 5.0,
+    "retrieval": 0.02,
+    "stored": 0.00299,
+    "write_10k": 0.21
+   },
+   "Cold GRS": {
+    "read_10k": 0.1,
+    "retrieval": 0.03,
+    "stored": 0.0081,
+    "write_10k": 0.36
+   },
+   "Cold LRS": {
+    "read_10k": 0.1,
+    "retrieval": 0.03,
+    "stored": 0.0036,
+    "write_10k": 0.18
+   },
+   "Cold RA-GRS": {
+    "read_10k": 0.1,
+    "retrieval": 0.03,
+    "stored": 0.0101,
+    "write_10k": 0.36
+   },
+   "Cool GRS": {
+    "read_10k": 0.01,
+    "retrieval": 0.01,
+    "stored": 0.0334,
+    "write_10k": 0.2
+   },
+   "Cool LRS": {
+    "read_10k": 0.01,
+    "retrieval": 0.01,
+    "stored": 0.0152,
+    "write_10k": 0.1
+   },
+   "Cool RA-GRS": {
+    "read_10k": 0.01,
+    "retrieval": 0.01,
+    "stored": 0.0425,
+    "write_10k": 0.2
+   },
+   "Hot GRS": {
+    "read_10k": 0.004,
+    "stored": 0.0458,
+    "write_10k": 0.1
+   },
+   "Hot LRS": {
+    "read_10k": 0.004,
+    "stored": 0.0208,
+    "write_10k": 0.05
+   },
+   "Hot RA-GRS": {
+    "read_10k": 0.004,
+    "stored": 0.0589,
+    "write_10k": 0.1
+   }
+  },
+  "egress": {
+   "free_gb": 100,
+   "usd_per_gb": 0.087
+  }
+ },
+ "generated": "2026-11-16",
+ "sources": {
+  "aws_egress": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json",
+  "aws_s3": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.json",
+  "azure": "https://prices.azure.com/api/retail/prices (serviceName=Storage/Bandwidth, eastus)"
+ },
+ "spec": "1 TB of files in object storage"
+}

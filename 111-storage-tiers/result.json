@@ -1,0 +1,197 @@
+{
+ "crossover_vs_s3_standard_gb": {
+  "B2": null,
+  "Blob Archive": 8.9,
+  "Blob Cold": 259.1,
+  "Blob Cool": 763.7,
+  "Blob Hot": null,
+  "R2 Standard": null,
+  "S3 Glacier Flexible Retrieval": 76.4,
+  "S3 Glacier Instant Retrieval": 247.5,
+  "S3 Standard-IA": 823.2
+ },
+ "headline": {
+  "B2": {
+   "egress": 0.0,
+   "requests": 0.0,
+   "restore": 0.0,
+   "retrieval": 0.0,
+   "storage": 7.0473,
+   "total": 7.0473
+  },
+  "Blob Archive": {
+   "egress": 0.0,
+   "requests": 250.1,
+   "restore": 0.0,
+   "retrieval": 2.0,
+   "storage": 1.0138,
+   "total": 253.1138
+  },
+  "Blob Cold": {
+   "egress": 0.0,
+   "requests": 5.18,
+   "restore": 0.0,
+   "retrieval": 3.0,
+   "storage": 3.6864,
+   "total": 11.8664
+  },
+  "Blob Cool": {
+   "egress": 0.0,
+   "requests": 0.6,
+   "restore": 0.0,
+   "retrieval": 1.0,
+   "storage": 15.5648,
+   "total": 17.1648
+  },
+  "Blob Hot": {
+   "egress": 0.0,
+   "requests": 0.25,
+   "restore": 0.0,
+   "retrieval": 0.0,
+   "storage": 21.2992,
+   "total": 21.5492
+  },
+  "R2 Standard": {
+   "egress": 0.0,
+   "requests": 0.225,
+   "restore": 0.0,
+   "retrieval": 0.0,
+   "storage": 15.21,
+   "total": 15.435
+  },
+  "S3 Glacier Flexible Retrieval": {
+   "egress": 0.0,
+   "requests": 0.25,
+   "restore": 25.0,
+   "retrieval": 1.0,
+   "storage": 3.6864,
+   "total": 29.9364
+  },
+  "S3 Glacier Instant Retrieval": {
+   "egress": 0.0,
+   "requests": 5.2,
+   "restore": 0.0,
+   "retrieval": 3.0,
+   "storage": 4.096,
+   "total": 12.296
+  },
+  "S3 Standard": {
+   "egress": 0.0,
+   "requests": 0.25,
+   "restore": 0.0,
+   "retrieval": 0.0,
+   "storage": 23.552,
+   "total": 23.802
+  },
+  "S3 Standard-IA": {
+   "egress": 0.0,
+   "requests": 0.6,
+   "restore": 0.0,
+   "retrieval": 1.0,
+   "storage": 12.8,
+   "total": 14.4
+  }
+ },
+ "headline_retrieval_gb": 100,
+ "object_kb": 200,
+ "sources": {
+  "aws_egress": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/index.json",
+  "aws_s3": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.json",
+  "azure": "https://prices.azure.com/api/retail/prices (serviceName=Storage/Bandwidth, eastus)",
+  "vendors": "vendors.json, see read_on dates"
+ },
+ "spec": "1 TB of files in object storage",
+ "stored_gb": 1024,
+ "sweep": {
+  "B2": {
+   "0": 7.05,
+   "10": 7.05,
+   "100": 7.05,
+   "1024": 7.05,
+   "250": 7.05,
+   "50": 7.05,
+   "512": 7.05
+  },
+  "Blob Archive": {
+   "0": 1.11,
+   "10": 26.31,
+   "100": 253.11,
+   "1024": 2661.98,
+   "250": 644.16,
+   "50": 127.11,
+   "512": 1327.2
+  },
+  "Blob Cold": {
+   "0": 3.87,
+   "10": 4.67,
+   "100": 11.87,
+   "1024": 166.17,
+   "250": 36.92,
+   "50": 7.87,
+   "512": 80.67
+  },
+  "Blob Cool": {
+   "0": 15.66,
+   "10": 15.81,
+   "100": 17.16,
+   "1024": 111.41,
+   "250": 32.46,
+   "50": 16.41,
+   "512": 59.19
+  },
+  "Blob Hot": {
+   "0": 21.35,
+   "10": 21.37,
+   "100": 21.55,
+   "1024": 103.79,
+   "250": 34.9,
+   "50": 21.45,
+   "512": 58.22
+  },
+  "R2 Standard": {
+   "0": 15.25,
+   "10": 15.27,
+   "100": 15.43,
+   "1024": 17.1,
+   "250": 15.7,
+   "50": 15.34,
+   "512": 16.18
+  },
+  "S3 Glacier Flexible Retrieval": {
+   "0": 3.74,
+   "10": 6.36,
+   "100": 29.94,
+   "1024": 355.18,
+   "250": 82.74,
+   "50": 16.84,
+   "512": 174.96
+  },
+  "S3 Glacier Instant Retrieval": {
+   "0": 4.3,
+   "10": 5.1,
+   "100": 12.3,
+   "1024": 169.38,
+   "250": 37.8,
+   "50": 8.3,
+   "512": 82.34
+  },
+  "S3 Standard": {
+   "0": 23.6,
+   "10": 23.62,
+   "100": 23.8,
+   "1024": 108.81,
+   "250": 37.6,
+   "50": 23.7,
+   "512": 61.71
+  },
+  "S3 Standard-IA": {
+   "0": 12.9,
+   "10": 13.05,
+   "100": 14.4,
+   "1024": 111.42,
+   "250": 30.15,
+   "50": 13.65,
+   "512": 57.66
+  }
+ }
+}
