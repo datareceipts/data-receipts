@@ -1,0 +1,65 @@
+{
+ "cheap_total": 82959600.0,
+ "cheap_vendor": "RunPod (Community)",
+ "co2_tons": 8930,
+ "dear_total": 379023600.0,
+ "dear_vendor": "Azure",
+ "family_cheap": 105717000.0,
+ "family_dear": 482997000.0,
+ "gap": 296064000.0,
+ "generated": "2026-11-16",
+ "gpu": "H100 SXM 80GB",
+ "gpu_hours": 30840000,
+ "model": "Llama 3.1 405B",
+ "one_gpu_years": 3521,
+ "per_m_tokens_cheap": 5.53,
+ "per_m_tokens_dear": 25.27,
+ "rows": [
+  {
+   "company": "RunPod",
+   "rate": 2.69,
+   "total": 82959600.0,
+   "vendor": "RunPod (Community)"
+  },
+  {
+   "company": "RunPod",
+   "rate": 3.99,
+   "total": 123051600.0,
+   "vendor": "RunPod (Secure)"
+  },
+  {
+   "company": "Lambda",
+   "rate": 4.59,
+   "total": 141555600.0,
+   "vendor": "Lambda"
+  },
+  {
+   "company": "AWS",
+   "rate": 6.88,
+   "total": 212179200.0,
+   "vendor": "AWS"
+  },
+  {
+   "company": "Azure",
+   "rate": 12.29,
+   "total": 379023600.0,
+   "vendor": "Azure"
+  }
+ ],
+ "sources": {
+  "gpu_hours": "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "rates": {
+   "aws_p4_spec": "https://aws.amazon.com/ec2/instance-types/p4/",
+   "aws_p5_spec": "https://aws.amazon.com/ec2/instance-types/p5/",
+   "aws_prices": "AWS Price List, https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.json",
+   "azure_nc_a100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nca100v4-series",
+   "azure_nc_h100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ncadsh100v5-series",
+   "azure_nd_h100_spec": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ndh100v5-series",
+   "azure_prices": "Azure Retail Prices API, https://prices.azure.com/api/retail/prices",
+   "vendor_1": "RunPod (Secure): https://www.runpod.io/pricing (read 2026-11-09)",
+   "vendor_2": "RunPod (Community): https://www.runpod.io/pricing (read 2026-11-09)",
+   "vendor_3": "Lambda: https://lambda.com/service/gpu-cloud (read 2026-11-09, effective 2026-11-16)"
+  }
+ },
+ "spread": 4.57
+}
