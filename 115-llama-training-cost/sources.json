@@ -1,0 +1,33 @@
+{
+ "_note": "Figures with no API. Each is from the primary source that published it, with the date read.",
+ "read_on": "2026-11-16",
+ "meta_model_card": {
+  "source": "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "table": "Training Time (GPU hours) / Training Location-Based Greenhouse Gas Emissions (tons CO2eq)",
+  "gpu_hours_405b": 30840000,
+  "gpu_hours_family": 39300000,
+  "gpu_hours_8b": 1460000,
+  "gpu_hours_70b": 7000000,
+  "hardware": "H100-80GB (TDP of 700W)",
+  "co2_tons_405b_location_based": 8930,
+  "co2_tons_family_location_based": 11390,
+  "co2_market_based": 0,
+  "note": "Market-based emissions are stated as 0, attributed to Meta's renewable electricity matching."
+ },
+ "corrections": [
+  {
+   "claim": "11,390 tons CO2 for the 405B model",
+   "seen_in": "https://www.theregister.com/2024/07/23/meta_llama31_405b/",
+   "correction": "11,390 tons is the figure for the whole Llama 3.1 family. The model card gives 8,930 tons for the 405B alone. Secondary coverage repeatedly attributes the family total to the single model."
+  },
+  {
+   "claim": "the 405B run took 54 days on 16,384 H100s",
+   "seen_in": "secondary tech coverage",
+   "correction": "16,384 GPUs for 54 days is 21.2M GPU-hours, which does not reconcile with the published 30.84M. Neither cluster size nor duration is used here."
+  }
+ ],
+ "gpu_rates": {
+  "source": "../109-gpu-pricing/compare.json, on-demand list prices",
+  "group": "H100 SXM 80GB"
+ }
+}

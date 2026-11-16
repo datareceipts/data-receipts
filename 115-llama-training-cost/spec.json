@@ -1,0 +1,19 @@
+{
+ "_note": "Two published numbers multiplied together: Meta's own GPU-hour figure for Llama 3.1 405B, and the market rate for the exact GPU Meta names. Written down before the multiplication was done. The question is deliberately 'what would this compute cost to rent', NOT 'what did Meta spend' - Meta owns its cluster and those are different questions.",
+ "name": "Renting the compute Meta used to train Llama 3.1 405B",
+ "model": "Llama 3.1 405B",
+ "gpu_hours": 30840000,
+ "gpu": "H100 SXM 80GB",
+ "gpu_hours_family": 39300000,
+ "tokens_trained_t": 15,
+ "co2_tons_405b": 8930,
+ "co2_tons_family": 11390,
+ "assumptions": [
+  "GPU-hours, hardware type and emissions come from Meta's own Llama 3.1 405B model card, which states H100-80GB at 700W TDP.",
+  "Hourly rates are the on-demand list prices measured in video 109 for the H100 SXM 80GB specifically, which is the same product the model card names.",
+  "This prices RENTING. Meta trained on hardware it owns, so this is not Meta's cost and is not presented as such.",
+  "On-demand rates. Nobody books 30 million GPU-hours on demand; a reservation of that size is negotiated and cheaper. The on-demand figure is an upper bound on each vendor's own list price, and the comparison between vendors is the point rather than the absolute.",
+  "Compute only. No storage, no networking, no data acquisition, no salaries, no failed runs, no research time.",
+  "Cluster size and wall-clock duration are deliberately excluded: the figures circulating for those come from secondary coverage and do not reconcile with the published GPU-hour total."
+ ]
+}
