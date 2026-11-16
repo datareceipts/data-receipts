@@ -1,0 +1,105 @@
+{
+ "co2": [
+  539,
+  2290,
+  11390
+ ],
+ "flagship_growth": 17.9,
+ "generated": "2026-11-16",
+ "generations": [
+  {
+   "card": "https://huggingface.co/meta-llama/Llama-2-70b-hf",
+   "co2_tons": 539,
+   "flagship": "70B",
+   "flagship_hours": 1720320,
+   "gpu": "A100 SXM 80GB",
+   "gpu_hours": 3311616,
+   "id": "llama2",
+   "label": "Llama 2",
+   "rates": {
+    "AWS": 3.4309,
+    "RunPod (Community)": 1.39
+   },
+   "released": "2023-07",
+   "totals": {
+    "AWS": 11361823.3344,
+    "RunPod (Community)": 4603146.239999999
+   }
+  },
+  {
+   "card": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
+   "co2_tons": 2290,
+   "flagship": "70B",
+   "flagship_hours": 6400000,
+   "gpu": "H100 SXM 80GB",
+   "gpu_hours": 7700000,
+   "id": "llama3",
+   "label": "Llama 3",
+   "rates": {
+    "AWS": 6.88,
+    "RunPod (Community)": 2.69
+   },
+   "released": "2024-04",
+   "totals": {
+    "AWS": 52976000.0,
+    "RunPod (Community)": 20713000.0
+   }
+  },
+  {
+   "card": "https://huggingface.co/meta-llama/Llama-3.1-405B",
+   "co2_tons": 11390,
+   "flagship": "405B",
+   "flagship_hours": 30840000,
+   "gpu": "H100 SXM 80GB",
+   "gpu_hours": 39300000,
+   "id": "llama31",
+   "label": "Llama 3.1",
+   "rates": {
+    "AWS": 6.88,
+    "RunPod (Community)": 2.69
+   },
+   "released": "2024-07",
+   "totals": {
+    "AWS": 270384000.0,
+    "RunPod (Community)": 105717000.0
+   }
+  }
+ ],
+ "growth": {
+  "AWS": 23.8,
+  "RunPod (Community)": 23.0
+ },
+ "hours": [
+  3311616,
+  7700000,
+  39300000
+ ],
+ "hours_growth": 11.9,
+ "labels": [
+  "Llama 2",
+  "Llama 3",
+  "Llama 3.1"
+ ],
+ "sources": {
+  "Llama 2": "https://huggingface.co/meta-llama/Llama-2-70b-hf",
+  "Llama 3": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
+  "Llama 3.1": "https://huggingface.co/meta-llama/Llama-3.1-405B",
+  "rates": "109-gpu-pricing/compare.json"
+ },
+ "totals_m": {
+  "AWS": [
+   11.4,
+   53.0,
+   270.4
+  ],
+  "RunPod (Community)": [
+   4.6,
+   20.7,
+   105.7
+  ]
+ },
+ "vendors": [
+  "RunPod (Community)",
+  "AWS"
+ ]
+}
