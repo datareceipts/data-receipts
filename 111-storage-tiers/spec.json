@@ -1,0 +1,17 @@
+{
+ "_note": "One fixed storage job, priced identically everywhere, written down before any price was looked up. The access rate is the variable the whole video turns on, so it is declared here as a swept range rather than chosen later to make a point.",
+ "name": "1 TB of files in object storage",
+ "stored_gb": 1024,
+ "months": 1,
+ "headline_retrieval_gb": 100,
+ "retrieval_sweep_gb": [0, 10, 50, 100, 250, 512, 1024],
+ "requests": {"writes_per_month": 10000, "reads_per_month": 500000},
+ "region": "us-east-1 / East US, one region",
+ "assumptions": [
+  "Retrieval means both pulling the bytes out of the archive tier AND sending them to the internet; a tier that is free to read but expensive to egress is not cheap.",
+  "Data has already been stored longer than every minimum-duration charge, so early-delete fees are quoted but not added to the headline bill.",
+  "No CDN in front. A CDN changes the answer and is a different video.",
+  "No reserved or committed-use discounts. List prices only, same as videos 102 and 110.",
+  "Google Cloud Storage is excluded: its price list needs an authenticated API key, and this project only publishes numbers it can pull from a public source."
+ ]
+}
