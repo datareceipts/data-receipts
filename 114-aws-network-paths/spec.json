@@ -1,0 +1,25 @@
+{
+ "_note": "One terabyte of traffic, priced by WHERE it goes rather than how much there is. The volume is held constant on purpose: the whole question is whether the destination changes the price, so the destination is the only thing allowed to vary. Written before any rate was looked up.",
+ "name": "One terabyte of traffic, five destinations",
+ "volume_gb": 1024,
+ "region": "us-east-1",
+ "hours": 730,
+ "paths": [
+  {"id": "same_az",      "label": "To another instance, same AZ"},
+  {"id": "cross_az",     "label": "To another instance, another AZ"},
+  {"id": "cross_region", "label": "To another AWS region"},
+  {"id": "internet",     "label": "To the internet, public subnet"},
+  {"id": "internet_nat", "label": "To the internet, via NAT Gateway"}
+ ],
+ "fixed_resources": {
+  "nat_gateways": 1,
+  "nat_gateway_hours": 730
+ },
+ "assumptions": [
+  "Egress only where the provider bills egress; cross-AZ is billed in BOTH directions and both sides are counted, because both appear on the same account's bill.",
+  "AWS's 100 GB per month free internet egress allowance is applied once, to the internet paths.",
+  "One NAT Gateway in one AZ. A real multi-AZ setup needs one per AZ and the fixed cost multiplies; that is reported, not folded into the headline.",
+  "No Transit Gateway, no VPC peering across accounts, no PrivateLink interface endpoints. Each of those adds another per-GB charge and is out of scope.",
+  "List prices, on-demand, no committed-use discount."
+ ]
+}
