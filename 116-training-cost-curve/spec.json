@@ -1,0 +1,28 @@
+{
+ "_note": "Three Meta model cards, one year apart, each priced on the GPU it actually names. Written down before any multiplication. The comparison is deliberately within one company and one method, because comparing across labs would mix different reporting conventions and prove nothing.",
+ "name": "What a frontier open model cost to train, 2023 to 2024",
+ "generations": [
+  {"id": "llama2",   "label": "Llama 2",   "released": "2023-07",
+   "gpu_hours": 3311616, "gpu": "A100 SXM 80GB",
+   "card": "https://huggingface.co/meta-llama/Llama-2-70b-hf",
+   "flagship": "70B", "flagship_hours": 1720320, "co2_tons": 539},
+  {"id": "llama3",   "label": "Llama 3",   "released": "2024-04",
+   "gpu_hours": 7700000, "gpu": "H100 SXM 80GB",
+   "card": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
+   "flagship": "70B", "flagship_hours": 6400000, "co2_tons": 2290},
+  {"id": "llama31",  "label": "Llama 3.1", "released": "2024-07",
+   "gpu_hours": 39300000, "gpu": "H100 SXM 80GB",
+   "card": "https://huggingface.co/meta-llama/Llama-3.1-405B",
+   "flagship": "405B", "flagship_hours": 30840000, "co2_tons": 11390}
+ ],
+ "price_vendors": ["RunPod (Community)", "AWS"],
+ "assumptions": [
+  "GPU-hours, hardware type and emissions are each model card's own published figures.",
+  "Each generation is priced on the GPU its card names: Llama 2 on A100 SXM 80GB, Llama 3 and 3.1 on H100 SXM 80GB. Pricing all three on one GPU would understate the jump, because the hardware got more expensive per hour as well as more numerous.",
+  "Only vendors that publish BOTH an A100 SXM 80GB and an H100 SXM 80GB rate are used, so the curve is never an artefact of switching vendor between generations. That is RunPod (Community) as the market floor and AWS as the hyperscaler.",
+  "This prices RENTING. Meta owns its clusters, so none of these are Meta's costs and none are presented as such.",
+  "On-demand list prices. A reservation at this scale is negotiated and cheaper; the shape of the curve is the finding, not the absolute.",
+  "Compute only. No data, no staff, no failed runs, no research time.",
+  "Within one company on purpose. Different labs report training compute differently, and some do not report it at all."
+ ]
+}
