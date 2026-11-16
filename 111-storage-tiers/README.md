@@ -96,10 +96,21 @@ API, carries the archive tier in the comparison.
 
 ## Caveats
 
+- **The archive figure assumes the data is in archive each time it is read.**
+  Rehydrating a blob moves it to an online tier, so pulling a dataset out once
+  and leaving it there costs the request charge once, not every month. The
+  $253.11 is the cost of using archive as if it were storage you read from,
+  which is the pattern the pricing exists to discourage. Azure's own
+  documentation is explicit that a blob in archive "can't be read or modified"
+  until rehydrated, and that the move is "billed as a read from the source
+  tier, where the read operation (per 10,000) and data retrieval (per GB)
+  charges of the source tier apply."
 - **Redundancy is not matched.** S3 Standard replicates across three or more
   availability zones. Azure's East US blob catalogue offers LRS (one
   datacentre), GRS and RA-GRS but no ZRS, so S3 Standard sits between the LRS
-  figures used here and GRS. Azure Hot GRS is $0.0458/GB-Mo against LRS's
+  figures used here and GRS. For the archive tier specifically there is no
+  like-for-like choice to make: Azure does not support ZRS, GZRS or RA-GZRS in
+  archive at all. Azure Hot GRS is $0.0458/GB-Mo against LRS's
   $0.0208, which would move Blob Hot from $21.55 to roughly $46. B2 and R2
   publish durability targets but not a comparable zone model.
 - Minimum storage durations are quoted, not charged: the spec assumes data
