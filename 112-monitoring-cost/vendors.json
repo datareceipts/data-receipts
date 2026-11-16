@@ -1,0 +1,90 @@
+{
+ "_note": "Monitoring vendors publish no price APIs. Every figure below is transcribed from the vendor's own pricing page or billing docs with the URL and the date read. Where a vendor does not publish a rate, that is recorded as unpublished rather than estimated.",
+ "read_on": "2026-11-16",
+ "vendors": [
+  {
+   "vendor": "Datadog",
+   "plan": "Pro, annual billing",
+   "source": "https://www.datadoghq.com/pricing/",
+   "model": "per host",
+   "lines": {
+    "infra_per_host_month": 15.00,
+    "infra_per_host_month_ondemand": 18.00,
+    "apm_per_host_month": 31.00,
+    "containers_included_per_host": 5,
+    "container_per_month_prepaid": 1.00,
+    "custom_metrics_included_per_host": 100,
+    "custom_metrics_per_100_ingested": 0.10,
+    "logs_ingest_per_gb": 0.10,
+    "logs_index_per_million_events_15day": 1.70
+   },
+   "unpublished": {
+    "custom_metrics_per_100_indexed":
+      "No dollar figure published. The billing docs say you pay 'an amount that is specified in your current contract' for each 100 indexed custom metrics over the allotment. The $0.10/100 figure above is for INGESTED custom metrics under Metrics without Limits only.",
+    "source": "https://docs.datadoghq.com/account_management/billing/custom_metrics/"
+   }
+  },
+  {
+   "vendor": "Grafana Cloud",
+   "plan": "Pro, self-serve",
+   "source": "https://grafana.com/pricing/",
+   "model": "per unit of data",
+   "lines": {
+    "platform_fee_month": 19.00,
+    "metrics_per_1k_series": 6.50,
+    "metrics_series_included": 10000,
+    "logs_included_gb": 50,
+    "logs_processing_per_gb": 0.050,
+    "logs_write_per_gb": 0.400,
+    "logs_retain_per_gb": 0.100,
+    "traces_included_gb": 50,
+    "traces_processing_per_gb": 0.05,
+    "traces_write_per_gb": 0.40,
+    "traces_retain_per_gb": 0.10,
+    "users_included": 3,
+    "user_per_month": 8.00,
+    "k8s_host_hour": 0.01,
+    "k8s_host_hours_included": 2232,
+    "k8s_container_hour": 0.0007,
+    "k8s_container_hours_included": 37944,
+    "app_observability_host_hour": 0.025,
+    "app_observability_host_hours_included": 2232
+   }
+  },
+  {
+   "vendor": "New Relic",
+   "plan": "Standard",
+   "source": "https://newrelic.com/pricing",
+   "model": "per seat and per GB ingested",
+   "lines": {
+    "data_included_gb": 100,
+    "data_per_gb": 0.40,
+    "data_plus_per_gb": 0.60,
+    "full_user_first": 10.00,
+    "full_user_additional": 99.00,
+    "full_users_max_standard": 5,
+    "core_user_month": 49.00,
+    "host_charge": 0.0
+   },
+   "note": "Hosts are explicitly not charged: the page states unlimited hosts are included at no additional cost."
+  }
+ ],
+ "excluded": [
+  {
+   "item": "Better Stack",
+   "why": "Meters metrics per GB rather than per series, and the spec fixes 10,000 custom metric series. Translating series to GB needs an invented datapoint size and sampling frequency, which would be my number rather than theirs.",
+   "source": "https://betterstack.com/pricing",
+   "checked_on": "2026-11-16"
+  },
+  {
+   "item": "Datadog log indexing",
+   "why": "Metered per million log events; the spec fixes logs in GB. Converting needs an invented bytes-per-event figure. EXCLUDING IT FLATTERS DATADOG: at a typical 500-byte event, 100 GB is roughly 200 million events, which at $1.70 per million would add about $340 a month and would more than double the Datadog total. The totals below therefore understate Datadog, and the direction of that error is stated wherever the totals appear.",
+   "checked_on": "2026-11-16"
+  },
+  {
+   "item": "Datadog indexed custom metric overage",
+   "why": "Datadog publishes no price for it. See unpublished block above. The ingested rate is used where a custom-metric figure is needed, and that substitution is labelled.",
+   "checked_on": "2026-11-16"
+  }
+ ]
+}
